@@ -18,11 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from blog import views as index_views
 from register import views as register_views
-from login import views as login_views
+from my_login import views as my_login_views
 
 urlpatterns = [
     path('', index_views.index, name='index'),
-    path('login/', login_views.login, name='login'),
+    path('my_login/', my_login_views.my_login, name='my_login'),
     path('register/', register_views.register, name='register'),
     path('admin/', admin.site.urls),
 ]
