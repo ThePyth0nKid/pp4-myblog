@@ -21,6 +21,6 @@ from register import views as register_views
 
 urlpatterns = [
     path('', index_views.index, name='index'),
-    path('', register_views.index, name='index'),
+    path('register/', register_views.register, name='register'),
     path('admin/', admin.site.urls),
 ]
