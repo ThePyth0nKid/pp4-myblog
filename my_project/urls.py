@@ -19,10 +19,12 @@ from django.urls import path, include
 from blog import views as index_views
 from register import views as register_views
 from my_login import views as my_login_views
+from contact_me import vies as contact_me_views
 
 urlpatterns = [
     path('', index_views.index, name='index'),
     path('my_login/', my_login_views.my_login, name='my_login'),
     path('register/', register_views.register, name='register'),
+    path('contact_me/', contact_me_views.contact_me, name='contact_me'),
     path('admin/', admin.site.urls),
 ]
