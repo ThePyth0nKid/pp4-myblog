@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'register',
     'my_login',
+    'contact_me',
 ]
 
 MIDDLEWARE = [
