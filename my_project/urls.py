@@ -19,7 +19,7 @@ from django.urls import path, include
 from blog import views as index_views
 from register import views as register_views
 from my_login import views as my_login_views
-from contact_me import vies as contact_me_views
+from contact_me import views as contact_me_views
 
 urlpatterns = [
     path('', index_views.index, name='index'),
