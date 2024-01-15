@@ -24,6 +24,8 @@ Finding the right consultant is more difficult than ever. That's why we've made 
 
 ## Catalouge
 
+<li><a href="#about-the-project">About the Project</a></li>
+<li><a href="#planing">Planing</a></li>
 <li><a href="#target-group">Target Group</a></li>
 <li><a href="#user-experince">UXD - User Experince Design</a></li>
 <ul><li><a href="#storytelling">Storytelling</a></li>
