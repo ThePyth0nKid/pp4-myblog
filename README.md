@@ -99,8 +99,14 @@ For base of the project i´ve made wireframes based on the user stories and the 
 
 <h2 id="user-stories">User Stories</h2>
 
-* 
-* 
+* As a **blogger** I can **create a new blog post** so that **I can share my thoughts and experiences with my audience**.
+
+### Acceptance Criteria
+
+* When I log in to the blog platform, I should see a "Create New Post" button.
+* The create post page should include fields for the title, content, and any relevant metadata.
+* After submitting the new post, it should be immediately visible on the blog.
+
 * 
 * 
 * 
