@@ -1,14 +1,14 @@
 # Portfolio Project 4 - Full-Stack Toolkit
 
-## Title
+<h2 id="about-the-project">About the Project</h2>
 
-Finding the right consultant is more difficult than ever. That's why we've made it simple.
+"3yAGI", standing for "3 Years to AGI", is my fourth portfolio project as a Full-Stack Software Developer student at the Cod Institute. This project, the first of such magnitude in my studies, aimed to create a Minimum Viable Product (MVP) using agile software development methodologies. A key aspect of the project was the digital management of these agile methods through GitHub, enabling transparent and efficient project steering.
 
-### This is how easy it works
+To effectively manage and continuously develop the project, I invested in a whiteboard. This became a central tool, allowing me to practically apply my knowledge of agile methods. I continuously designed, updated, and refined the project, documenting the progress through photos and sharing these with interested parties.
 
-1. Simply create a request for the consultant you are looking for.
-2. Our partners present the best consultants to you.
-3. Compare consultants and choose the one that is best for your organization.
+The core of 3yAGI is a blog website, developed using Django as the backend framework and Bootstrap for the frontend. The integration of a PostgreSQL database ensures robust data management, while Cloudinary is used for image storage. The blog provides a platform for bloggers and readers to share and explore experiences, achievements, doubts, and thoughts not only about software development but also about all aspects of Artificial Intelligence (AI) and Artificial General Intelligence (AGI).
+
+A unique aspect of this project is its temporal dimension. "3yAGI" symbolizes a three-year journey aimed at tracking and reflecting on developments in the field of AI and AGI. It's about assessing whether the ambitious goal of achieving AGI can be realized within this timeframe. Thus, this project stands as a testament to both technological advancement and personal growth, embodying the essence of learning, sharing, and developing in the realms of software development and AI research.
 
 ![Mockup Image]()
 
