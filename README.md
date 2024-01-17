@@ -10,7 +10,7 @@
 
 ## Repository
 
-[View repository]()
+[View repository](https://github.com/ThePyth0nKid/pp4-myblog)
 
 ---
 
@@ -70,9 +70,7 @@ A unique aspect of this project is its temporal dimension. "3yAGI" symbolizes a 
 ---
 
 <h2 id="user-experince">UXD - User Experince Design</h2>
-To better understand the customer journey i made a story about how a customer journey could look.
-
-For base of the project i´ve made wireframes based on the user stories and the flowchart of customer/partner.
+To thoroughly understand the customer journey, I crafted a narrative depicting a typical customer experience. Based on this, I developed wireframes that directly reflected the insights gained from these user stories, laying a solid foundation for the project.
 
 <h3 id="storytelling"></h3>
 
@@ -106,6 +104,8 @@ For base of the project i´ve made wireframes based on the user stories and the 
 * When I log in to the blog platform, I should see a "Create New Post" button.
 * The create post page should include fields for the title, content, and any relevant metadata.
 * After submitting the new post, it should be immediately visible on the blog.
+
+---
 
 * 
 * 
@@ -186,9 +186,6 @@ From the overview the user can see the request and click on edit request if they
 ![reader-overview](.)
 
 ![overview details]()
-
-<h3 id="send-candidates">Send Candidates</h3>
-The partner can see information about the request and when they have a candidate that suits the request, they can present the candidate to the customer.
 
 ![present-candidate]()
 
