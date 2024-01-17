@@ -255,9 +255,9 @@ web: gunicorn jobin.wsgi
 
 11. Disable Heroku from collecting static files
 
-heroku config:set DISABLE_COLLECTSTATIC=1 --app jobin-compare-consultants
+heroku config:set DISABLE_COLLECTSTATIC=1 --
 
-12. Add the hostname to project settings.py file
+1.  Add the hostname to project settings.py file
 
 ALLOWED_HOSTS = []
 
@@ -303,13 +303,10 @@ Deploy Branch
 * [Heroku](https://id.heroku.com/login)
 * [Cloudinary](https://cloudinary.com/)
 * [Github](https://github.com/)
-* [Gitpod](https://www.gitpod.io/)
-* [SimpleImageResizer](https://www.simpleimageresizer.com/)
-* [Pagespeed](https://pagespeed.web.dev/)
+* [Codeanywhere](https://app.codeanywhere.com/)
 * [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/)
 * [Techsini](https://techsini.com/multi-mockup/index.php)
 * [Pexels](https://www.pexels.com)
-* [Writer](https://writer.com/grammar-checker/)
 
 ---
 
@@ -317,9 +314,9 @@ Deploy Branch
 
 #### Code
 
-* To help me get started with the project and understand the basics, i followed [Code Institute](https://codeinstitute.net/se/) and Matt´s Walktrough on "I Think therefore i Blog", big thanks for getting me started.
+* 
 
-* Ed, Ger and Oisin, Tutors at [Code Institute](https://codeinstitute.net/se/) helped me solve some bugs in my code, big thanks.
+* 
 
 #### Bootstrap
 
