@@ -1,0 +1,204 @@
+body {
+    background-color: #F9FAFC;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Modern font */
+}
+
+.brand {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4A4A4F;
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.red-o {
+    color: #E84610;
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.thin {
+    font-weight: 300;
+}
+
+.light-bg {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.dark-bg {
+    background-color: #445261;
+}
+
+.main-bg {
+    background-color: #F9FAFC;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+    /* Smooth transform */
+}
+
+.card:hover {
+    transform: scale(1.03);
+    /* Slight scale up on hover */
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #188181;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    /* Adjusted font size for modern look */
+}
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #445261;
+    color: white;
+    position: relative;
+    padding: 10px;
+    /* Added padding */
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #445261;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #445261;
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.post-link:hover,
+.page-link {
+    color: #E84610;
+}
+
+.post-title {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
+.btn-signup,
+.btn-edit {
+    background-color: #188181;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    /* Added padding for better button size */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+    border: 1px solid #188181;
+    /* Added border for contrast */
+}
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+    transition: transform 0.2s ease;
+    /* Added transform transition */
+}
+
+.btn-like:hover,
+.btn-like:active {
+    transform: scale(1.1);
+    /* Scale effect on hover */
+}
+
+.btn-delete {
+    color: #fff;
+    background: #E84610;
+    border: none;
+    padding: 8px 15px;
+    /* Added padding for better button size */
+    border-radius: 4px;
+    /* Rounded corners */
+}
+
+.btn-delete:hover {
+    background-color: #cc3815;
+    /* Darken color on hover */
+}
+
+.faded {
+    color: rgb(172, 175, 175);
+}
+
+.approval {
+    color: rgb(222, 146, 168);
+}
