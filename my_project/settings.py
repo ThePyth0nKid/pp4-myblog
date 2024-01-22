@@ -29,9 +29,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-ezm1$@xlz0nk#o$jjbdq!^75t!%v+#sr*zs(b4d!n6=6=$&2$l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-thepyth0nkid-pp4-myblog-l43pa5ri7f.us2.codeanyapp.com', '.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-thepyth0nkid-pp4-myblog-l43pa5ri7f.us2.codeanyapp.com', '.herokuapp.com']
 
 
 # Application definition
@@ -52,10 +53,9 @@ INSTALLED_APPS = [
     'contact_me',
 ]
 
-SITE_ID = 1
-
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+SITE_ID = 1  # Identifier for the current Django site
+LOGIN_REDIRECT_URL = '/'  # Redirect to home page after login
+LOGOUT_REDIRECT_URL = '/'  # Redirect to home page after logout
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -127,6 +127,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Disables email verification for user accounts
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
