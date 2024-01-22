@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'blog',
-    'contact_me',
 ]
 
 SITE_ID = 1  # Identifier for the current Django site
