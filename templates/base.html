@@ -68,6 +68,10 @@
                             href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
+                    <!-- Contact Me -->
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" href="{% url 'contact' %}">Contact Me</a>
+                    </li>
                 </ul>
                 <span class="navbar-text text-muted">
                     adventures of the way to AGI

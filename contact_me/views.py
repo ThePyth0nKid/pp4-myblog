@@ -9,4 +9,4 @@ def contact_view(request):
             form.save()
     else:
         form = ContactForm()
-    return render(request, 'contact.html', {'form': form})
+    return render(request, 'contact_me/contact.html', {'form': form})
