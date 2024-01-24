@@ -39,7 +39,9 @@ body {
 .nav-link:hover {
     color: var(--accent-color);
     transition: color 0.3s ease;
-}
+    font-size: 1.1em;
+    font-weight: bold;
+}   
 
 .main-bg {
     background-color: var(--background-color);
