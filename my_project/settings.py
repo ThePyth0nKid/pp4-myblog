@@ -59,6 +59,10 @@ SITE_ID = 1  # Identifier for the current Django site
 LOGIN_REDIRECT_URL = '/'  # Redirect to home page after login
 LOGOUT_REDIRECT_URL = '/'  # Redirect to home page after logout
 
+# Crispy Forms Settings
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
