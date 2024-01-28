@@ -36,6 +36,7 @@ def post_detail(request, slug):
 
     # Count the number of approved comments for the post
     comment_count = post.comments.filter(approved=True).count()
+    comment_form = CommentForm()
 
     # Render the post detail page with post data and comments
     return render(
@@ -45,5 +46,6 @@ def post_detail(request, slug):
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
+            "comment_form": comment_form,
         },
     )
