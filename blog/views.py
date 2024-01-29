@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
 
@@ -38,7 +39,6 @@ def post_detail(request, slug):
     # Count the number of approved comments for the post
     comment_count = post.comments.filter(approved=True).count()
 
-
     # Process the form only on a POST request
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -49,7 +49,6 @@ def post_detail(request, slug):
             comment.author = request.user
             comment.post = post
             comment.save()
-
 
     comment_form = CommentForm()
 
