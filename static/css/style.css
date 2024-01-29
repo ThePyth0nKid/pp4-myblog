@@ -41,7 +41,7 @@ body {
     transition: color 0.3s ease;
     font-size: 1.1em;
     font-weight: bold;
-}   
+}
 
 .main-bg {
     background-color: var(--background-color);
@@ -93,6 +93,11 @@ body {
     color: white;
     position: relative;
     padding: 10px;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
 }
 
 .post-link {
