@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Admin Messages</h2>
+<ul>
+  {% for contact in contacts %}
+  <li>
+    <strong>From:</strong> {{ contact.name }} <strong>Email:</strong> {{
+    contact.email }}
+    <p>{{ contact.message }}</p>
+  </li>
+  {% empty %}
+  <li>No messages.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
