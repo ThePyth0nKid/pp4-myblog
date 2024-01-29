@@ -37,6 +37,20 @@ def post_detail(request, slug):
 
     # Count the number of approved comments for the post
     comment_count = post.comments.filter(approved=True).count()
+
+
+    # Process the form only on a POST request
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+
+    # Save the comment if the form is valid
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.post = post
+            comment.save()
+
+
     comment_form = CommentForm()
 
     # Render the post detail page with post data and comments
