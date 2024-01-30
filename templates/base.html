@@ -75,6 +75,19 @@
             </li>
             <!-- User Authentication -->
             {% if user.is_authenticated %}
+            <!-- Spezieller Admin Link zu Messages -->
+            {% if user.is_superuser %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'admin_dashboard' %}"
+                >Messages</a
+              >
+            </li>
+            {% else %}
+            <!-- Standard-Link zu Contact Me -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact_me' %}">Contact Me</a>
+            </li>
+            {% endif %}
             <li class="nav-item">
               <a
                 class="nav-link {% if request.path == logout_url %}active{% endif %}"
@@ -101,14 +114,6 @@
               >
             </li>
             {% endif %}
-            <!-- Contact Me -->
-            <li class="nav-item">
-              <a
-                class="nav-link {% if request.path == '/contact/' %}active{% endif %}"
-                href="{% url 'contact' %}"
-                >Contact Me</a
-              >
-            </li>
           </ul>
           <span class="navbar-text text-muted">
             adventures of the way to AGI

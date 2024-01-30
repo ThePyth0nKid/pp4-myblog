@@ -8,6 +8,5 @@ def admin_messages(request):
         contacts = Contact.objects.all()
         return render(request, 'admin_dashboard/admin_dashboard.html', {'contacts': contacts})
     else:
-        # Umleiten, wenn der Benutzer kein Admin ist
-        # Ersetzen Sie 'home' durch den Namen Ihrer Startseiten-URL
+
         return redirect('home')
