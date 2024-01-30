@@ -14,4 +14,4 @@ def contact_view(request):
     else:
         form = ContactForm()
 
-    return render(request, 'contact_me/contact.html', {'form': form | crispy})
+    return render(request, 'contact_me/contact.html', {'form': form})
