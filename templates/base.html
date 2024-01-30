@@ -83,10 +83,11 @@
               >
             </li>
             {% else %}
-            <!-- Standard-Link zu Contact Me -->
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact_me' %}">Contact Me</a>
-            </li>
+            <!-- "Contact Me" nur für normale Benutzer -->
+              <a
+                class="nav-link {% if request.path == '/contact/' %}active{% endif %}"
+                href="{% url 'contact' %}"
+                >Contact Me</a
             {% endif %}
             <li class="nav-item">
               <a
