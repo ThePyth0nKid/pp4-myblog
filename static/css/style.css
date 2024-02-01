@@ -100,6 +100,19 @@ body {
     overflow: hidden;
 }
 
+.post-image {
+    width: 100%;
+    /* passt die Breite an den Container an */
+    height: auto;
+    /* behält das Seitenverhältnis bei */
+    max-width: 400px;
+    /* maximale Breite des Bildes */
+    display: block;
+    /* verhindert unerwünschte Abstände unter dem Bild */
+    margin: 0 auto;
+    /* zentriert das Bild */
+}
+
 .post-link {
     text-decoration: none;
     color: var(--text-color);
@@ -148,6 +161,24 @@ body {
 
 .btn-delete:hover {
     background-color: darken(var(--accent-color), 10%);
+}
+
+.footer a {
+    color: white;
+    /* Sets the color of the icons to white */
+    text-decoration: none;
+    /* Removes the underline from the links */
+}
+
+.footer a:hover {
+    color: #ccc;
+    /* Optional: Changes the color when hovering over the icon */
+}
+
+/* FontAwesome Icon Adjustments */
+.footer .fab {
+    transition: color 0.3s ease;
+    /* Smooth color transition for hover effect */
 }
 
 @media screen and (max-width: 768px) {
