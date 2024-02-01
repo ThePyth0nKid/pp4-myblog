@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'cloudinary',
     'blog',
+    'contact_me',
 ]
 
 SITE_ID = 1  # Identifier for the current Django site
