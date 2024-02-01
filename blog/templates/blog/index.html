@@ -19,8 +19,12 @@
         </div>
     </div>
     <div class="col-md-6">
-        <!-- Bild des neuesten Posts -->
-        <img src="{% static 'images/default.png' %}" class="post-image" alt="placeholder">
+        <!-- Conditional Image Display for the Latest Post -->
+        {% if "placeholder" in post_list.0.featured_image.url %}
+        <img src="{% static 'images/default.png' %}" class="post-image card-img-top" alt="placeholder image">
+        {% else %}
+        <img src="{{ post_list.0.featured_image.url }}" class="post-image card-img-top" alt="{{ post_list.0.title }}">
+        {% endif %}
     </div>
     {% endif %}
 </div>
@@ -32,16 +36,16 @@
         <div class="col-md-4">
             <div class="card mb-4">
                 <div class="card-body">
-                    <div class="image-container">
-                        <div class="image-flash">
-                            <p class="author">Author: {{ post.author }}</p>
-                        </div>
-                    </div>
+                    <!-- Conditional Image Display within the For-Loop for Other Posts -->
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
+                    {% else %}
+                    <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                    {% endif %}
                     <a href="{% url 'post_detail' post.slug %}" class="post-link">
                         <h2 class="card-title">{{ post.title }}</h2>
                         <p class="card-text">{{ post.excerpt }}</p>
                     </a>
-
                     <hr />
                     <p class="card-text text-muted h6">{{ post.created_on}}</p>
                 </div>
