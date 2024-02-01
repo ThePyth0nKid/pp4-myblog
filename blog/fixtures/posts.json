@@ -1,7 +1,6 @@
 [
     {
         "model": "blog.post",
-        "pk": null,
         "fields": {
             "title": "Breakpoints or Breaking Point? Surviving JavaScript Debugging",
             "slug": "breakpoints-or-breaking-point-surviving-javascript-debugging",
@@ -209,4 +208,5 @@
             "updated_on": "2023-09-13T08:47:31.725Z"
         }
     }
-]
+]      "pk": null,
+  
