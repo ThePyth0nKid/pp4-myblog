@@ -3,21 +3,47 @@
 {% block content %}
 
 <div class="container mt-4">
+    {% if page_obj.number == 1 %}
+    <!-- Welcome Section for first page only -->
+    <div class="bg-light py-5">
+        <div class="container text-center">
+            <h1 class="mb-3">Welcome to The 3yAGI Blog</h1>
+            <p class="lead">
+                In this blog, Nelson Mehlis dives into the fast-evolving world of technology with a focus on the race
+                towards Artificial
+                General Intelligence (AGI). Over the next three years, he'll share insights from the trenches of
+                software development,
+                inspired by visionaries like Sam Altman and Elon Musk. Expect tales of challenges, breakthroughs, and
+                the day-to-day
+                life of a junior developer on the cusp of the future. This blog is your window into the journey toward
+                AGI. Welcome
+                aboard!
+            </p>
+        </div>
+    </div>
+    {% endif %}
     <!-- Latest Post with Image -->
     {% if post_list %}
     <div class="card mb-4 shadow">
         <div class="row no-gutters">
             <div class="col-md-6">
                 {% if "placeholder" in post_list.0.featured_image.url %}
+                <!-- Placeholder image if no featured image is available -->
                 <img src="{% static 'images/default.png' %}" class="card-img-top new-post" alt="placeholder image">
                 {% else %}
-                <img src="{{ post_list.0.featured_image.url }}" class="card-img-top new-post" alt="{{ post_list.0.title }}">
+                <!-- Display the featured image -->
+                <img src="{{ post_list.0.featured_image.url }}" class="card-img-top new-post"
+                    alt="{{ post_list.0.title }}">
                 {% endif %}
             </div>
             <div class="col-md-6">
                 <div class="card-body">
+                    <!-- Post title and excerpt -->
                     <h2 class="card-title">{{ post_list.0.title }}</h2>
                     <p class="card-text">{{ post_list.0.excerpt }}</p>
+                    <!-- Displaying author info -->
+                    <p class="card-text"><small class="text-muted">By {{ post_list.0.author }}</small></p>
+                    <!-- Read More button -->
                     <a href="{% url 'post_detail' post_list.0.slug %}" class="btn btn-primary">Read More</a>
                 </div>
             </div>
@@ -29,22 +55,25 @@
     <div class="row">
         {% for post in post_list|slice:"1:4" %}
         <div class="col-md-4 d-flex align-items-stretch">
-            <!-- Flex container to ensure equal height -->
             <div class="card mb-4 shadow h-100">
-                <!-- h-100 to make the card full height -->
                 {% if "placeholder" in post.featured_image.url %}
+                <!-- Placeholder image if no featured image is available -->
                 <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
                 {% else %}
+                <!-- Display the featured image -->
                 <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                 {% endif %}
                 <div class="card-body d-flex flex-column">
-                    <!-- Flex column for internal card layout -->
+                    <!-- Displaying post title -->
                     <h5 class="card-title">{{ post.title }}</h5>
+                    <!-- Displaying author info -->
+                    <p class="card-text"><small class="text-muted">By {{ post.author }}</small></p>
+                    <!-- Post excerpt -->
                     <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
-                    <!-- flex-grow-1 to make the text container grow -->
+                    <!-- Read More button aligned at the bottom -->
                     <a href="{% url 'post_detail' post.slug %}" class="btn btn-outline-primary mt-auto">Read More</a>
-                    <!-- mt-auto to push the button to the bottom -->
                 </div>
+                <!-- Displaying publication date -->
                 <div class="card-footer text-muted">
                     Published on {{ post.created_on }}
                 </div>
@@ -54,6 +83,7 @@
     </div>
 
     {% if is_paginated %}
+    <!-- Pagination -->
     <nav aria-label="Page navigation" class="my-4">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
