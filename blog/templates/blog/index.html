@@ -2,74 +2,68 @@
 {% load static %}
 {% block content %}
 
-<!-- index.html content starts here -->
-
-<!-- Neuester Post in Groß mit Bild -->
-<div class="row mt-3">
+<div class="container mt-4">
+    <!-- Latest Post with Image -->
     {% if post_list %}
-    <div class="col-md-6">
-        <div class="card mb-4">
-            <div class="card-body">
-                <!-- Details des neuesten Posts -->
-                <h2 class="card-title">{{ post_list.0.title }}</h2>
-                <p class="card-text">{{ post_list.0.excerpt }}</p>
-                <!-- Link zum neuesten Post -->
-                <a href="{% url 'post_detail' post_list.0.slug %}" class="post-link">Weiterlesen</a>
+    <div class="card mb-4 shadow">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                {% if "placeholder" in post_list.0.featured_image.url %}
+                <img src="{% static 'images/default.png' %}" class="card-img-top" alt="placeholder image">
+                {% else %}
+                <img src="{{ post_list.0.featured_image.url }}" class="card-img-top" alt="{{ post_list.0.title }}">
+                {% endif %}
             </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <!-- Conditional Image Display for the Latest Post -->
-        {% if "placeholder" in post_list.0.featured_image.url %}
-        <img src="{% static 'images/default.png' %}" class="post-image card-img-top" alt="placeholder image">
-        {% else %}
-        <img src="{{ post_list.0.featured_image.url }}" class="post-image card-img-top" alt="{{ post_list.0.title }}">
-        {% endif %}
-    </div>
-    {% endif %}
-</div>
-
-<!-- Blog Entries Column für die nächsten drei Posts -->
-<div class="col-12 mt-3 left">
-    <div class="row">
-        {% for post in post_list|slice:"1:4" %}
-        <div class="col-md-4">
-            <div class="card mb-4">
+            <div class="col-md-6">
                 <div class="card-body">
-                    <!-- Conditional Image Display within the For-Loop for Other Posts -->
-                    {% if "placeholder" in post.featured_image.url %}
-                    <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
-                    {% else %}
-                    <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
-                    {% endif %}
-                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                        <h2 class="card-title">{{ post.title }}</h2>
-                        <p class="card-text">{{ post.excerpt }}</p>
-                    </a>
-                    <hr />
-                    <p class="card-text text-muted h6">{{ post.created_on}}</p>
+                    <h2 class="card-title">{{ post_list.0.title }}</h2>
+                    <p class="card-text">{{ post_list.0.excerpt }}</p>
+                    <a href="{% url 'post_detail' post_list.0.slug %}" class="btn btn-primary">Read More</a>
                 </div>
             </div>
         </div>
-        {% if forloop.counter|divisibleby:3 %}
     </div>
-    <div class="row">{% endif %}
+    {% endif %}
+
+    <!-- Blog Entries Column for the next three posts -->
+    <div class="row">
+        {% for post in post_list|slice:"1:4" %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow">
+                {% if "placeholder" in post.featured_image.url %}
+                <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{ post.excerpt }}</p>
+                    <a href="{% url 'post_detail' post.slug %}" class="btn btn-outline-primary">Read More</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Published on {{ post.created_on }}
+                </div>
+            </div>
+        </div>
         {% endfor %}
     </div>
+
+    {% if is_paginated %}
+    <nav aria-label="Page navigation" class="my-4">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">« Prev</a>
+            </li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li class="page-item">
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next »</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
 </div>
 
-{% if is_paginated %}
-<nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center">
-        {% if page_obj.has_next %}
-        <li>
-            <a href="?page={{ page_obj.next_page_number }}" class="page-link">
-                NEXT &raquo;</a>
-        </li>
-        {% endif %}
-    </ul>
-</nav>
-{% endif %}
-
-<!-- index.html content ends here -->
 {% endblock %}
