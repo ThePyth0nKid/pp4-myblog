@@ -1,15 +1,23 @@
-{% extends 'base.html' %} {% block content %}
-<h2>Admin Messages</h2>
-<ul>
-  {% for contact in contacts %}
-  <li>
-    <strong>From:</strong> {{ contact.name }}
-    <!-- Email -->
-    <strong>Email:</strong> {{ contact.email }}
-    <p>{{ contact.message }}</p>
-  </li>
-  {% empty %}
-  <li>No messages.</li>
-  {% endfor %}
-</ul>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4 mb-5">
+    <!-- Hier wurde mb-5 hinzugefügt für Abstand zum Footer -->
+    <h2 class="mb-4">Admin Messages</h2>
+    {% if contacts %}
+    <div class="list-group">
+        {% for contact in contacts %}
+        <div class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ contact.name }}</h5>
+                <small>{{ contact.email }}</small>
+            </div>
+            <p class="mb-1">{{ contact.message }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No messages.</p>
+    {% endif %}
+</div>
 {% endblock %}
