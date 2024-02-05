@@ -35,6 +35,36 @@
             </div>
         </div>
     </div>
+    <!-- Display edit and delete buttons for superusers -->
+    {% if user.is_superuser %}
+    <div class="row">
+        <div class="col-12">
+            <a href="{% url 'edit_post' slug=post.slug %}" class="btn btn-primary">Edit</a>
+            <!-- Button to open delete confirmation modal -->
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                data-postslug="{{ post.slug }}">Delete</button>
+        </div>
+    </div>
+    {% endif %}
+    <!-- Delete confirmation modal for post -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete Post?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this post?
+                    This action cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Displaying count of comments -->
     <div class="row">
         <div class="col-12">
@@ -114,4 +144,5 @@
 
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
+<script src="{% static 'js/delete-post.js' %}"></script>
 {% endblock %}

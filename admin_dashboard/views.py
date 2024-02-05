@@ -1,3 +1,5 @@
+from blog.models import Post
+from django.shortcuts import render, redirect, get_object_or_404
 from django.shortcuts import render, redirect
 from contact_me.models import Contact
 from django.contrib.auth.decorators import login_required
@@ -30,41 +32,59 @@ def admin_messages(request):
 
 
 @login_required
-def create_post(request):
+def create_post(request, slug=None):
     """
-    Creates a new blog post. This view is only accessible to authenticated superusers.
+    Create or edit a blog post using its slug. This view is only accessible to authenticated superusers.
 
-    - If the request method is POST, it attempts to create a new post using the submitted form data.
+    - If the request method is POST, it attempts to create or edit a post using the submitted form data.
     - Validates the form data, and if valid, sets the post's author to the currently logged-in user and saves the post.
-    - Redirects to the 'home' page after successful post creation and shows a success message.
-    - If the request method is not POST (e.g., GET), it displays an empty form for creating a new post.
+    - Redirects to the post detail page after successful post creation or editing and shows a success message.
+    - If the request method is not POST (e.g., GET), it displays a form for creating or editing a post, pre-filled if editing.
 
     Args:
         request: HttpRequest object containing metadata about the request.
+        slug: Optional parameter for editing an existing post (pass the post's slug to edit).
 
     Returns:
-        HttpResponse object that renders the 'create_post.html' template with the post creation form.
+        HttpResponse object that renders the 'create_post.html' template with the post creation or edit form.
     """
-    if request.user.is_authenticated and request.user.is_superuser:
-        if request.method == 'POST':
-            form = PostForm(request.POST, request.FILES)
-            if form.is_valid():
-                new_post = form.save(commit=False)
-                # Set the post's author to the currently logged-in user
-                new_post.author = request.user
-                new_post.save()
-                # Display a success message to the user
-                messages.success(
-                    request, 'The post has been successfully created!')
-                # Redirect to the home page after successful post creation
-                return redirect('home')
-        else:
-            form = PostForm()
+    post = None
+    if slug:
+        post = get_object_or_404(Post, slug=slug)
+        if not request.user.is_superuser:
+            messages.error(
+                request, "You do not have permission to edit this post.")
+            return redirect('post_detail', slug=slug)
 
-        # Render the post creation form for GET requests or if form validation fails
-        return render(request, 'admin_dashboard/create_post.html', {'form': form})
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            new_or_edited_post = form.save(commit=False)
+            new_or_edited_post.author = request.user
+            new_or_edited_post.save()
+            # Necessary for saving many-to-many relationships, if any.
+            form.save_m2m()
+            messages.success(request, "Post '{}' successfully updated!".format(
+                new_or_edited_post.title) if post else "Post '{}' successfully created!".format(new_or_edited_post.title))
+            return redirect('post_detail', slug=new_or_edited_post.slug)
     else:
-        # If the user is not authenticated or not a superuser, redirect them to the 'home' page
+        form = PostForm(instance=post)
+
+    return render(request, 'admin_dashboard/create_post.html', {'form': form, 'post': post})
+
+
+
+@login_required
+def delete_post(request, slug):
+    """
+    Delete a blog post using its slug. This view is only accessible to authenticated superusers.
+    """
+    if not request.user.is_superuser:
         messages.warning(
-            request, 'You do not have permission to create a post.')
+            request, 'You do not have permission to delete a post.')
         return redirect('home')
+
+    post = get_object_or_404(Post, slug=slug)
+    post.delete()
+    messages.success(request, 'The post has been successfully deleted!')
+    return redirect('home')

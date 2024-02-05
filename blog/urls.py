@@ -1,3 +1,4 @@
+from admin_dashboard.views import create_post, delete_post
 from . import views
 from django.urls import path
 
@@ -9,4 +10,7 @@ urlpatterns = [
          views.comment_edit, name='comment_edit'),
     path('<slug:slug>/delete_comment/<int:comment_id>',
          views.comment_delete, name='comment_delete'),
+    path('admin_dashboard/edit/<slug:slug>/', create_post, name='edit_post'),
+    path('admin_dashboard/delete/<slug:slug>/', delete_post, name='delete_post'),
+
 ]
