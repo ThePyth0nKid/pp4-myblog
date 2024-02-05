@@ -1,4 +1,5 @@
 from django import forms
+from django_summernote.widgets import SummernoteWidget
 from blog.models import Post
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit, Field
@@ -14,6 +15,11 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'slug', 'featured_image',
                   'content', 'status', 'excerpt', 'updated_on']
+        widgets = {
+            # Apply Django Summernote to the 'content' field for rich text editing.
+            'content': SummernoteWidget(),
+        }
+        
 
     def __init__(self, *args, **kwargs):
         super(PostForm, self).__init__(*args, **kwargs)
