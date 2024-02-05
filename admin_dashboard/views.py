@@ -1,6 +1,5 @@
 from blog.models import Post
 from django.shortcuts import render, redirect, get_object_or_404
-from django.shortcuts import render, redirect
 from contact_me.models import Contact
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
@@ -48,13 +47,16 @@ def create_post(request, slug=None):
     Returns:
         HttpResponse object that renders the 'create_post.html' template with the post creation or edit form.
     """
+    # Check if the user is a superuser
+    if not request.user.is_superuser:
+        messages.error(
+            request, "You do not have permission to access this page.")
+        # Redirect to the home page and display an error message
+        return redirect('home')
+
     post = None
     if slug:
         post = get_object_or_404(Post, slug=slug)
-        if not request.user.is_superuser:
-            messages.error(
-                request, "You do not have permission to edit this post.")
-            return redirect('post_detail', slug=slug)
 
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
@@ -71,7 +73,6 @@ def create_post(request, slug=None):
         form = PostForm(instance=post)
 
     return render(request, 'admin_dashboard/create_post.html', {'form': form, 'post': post})
-
 
 
 @login_required
