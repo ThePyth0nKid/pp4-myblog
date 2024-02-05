@@ -38,7 +38,7 @@ def post_detail(request, slug):
     comments = post.comments.all().order_by("-created_on")
 
     # Count the number of approved comments for the post
-    comment_count = post.comments.filter(approved=True).count()
+    comment_count = post.comments.count()
 
     # Process the form only on a POST request
     if request.method == "POST":
@@ -52,7 +52,7 @@ def post_detail(request, slug):
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
+                'Comment submitted'
             )
 
     comment_form = CommentForm()
