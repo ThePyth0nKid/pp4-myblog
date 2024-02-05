@@ -40,6 +40,7 @@
                     <p class="card-text">{{ post_list.0.excerpt }}</p>
                     <!-- Displaying author info -->
                     <p class="card-text"><small class="text-muted">By {{ post_list.0.author }}</small></p>
+                    <!-- Displaying publication date -->
                     <!-- Read More button -->
                     <a href="{% url 'post_detail' post_list.0.slug %}" class="btn btn-primary">Read More</a>
                 </div>
@@ -66,7 +67,7 @@
                     <!-- Post excerpt -->
                     <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
                     <!-- Read More button aligned at the bottom -->
-                    <a href="{% url 'post_detail' post.slug %}" class="btn btn-outline-primary mt-auto">Read More</a>
+                    <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">Read More</a>
                 </div>
                 <!-- Displaying publication date -->
                 <div class="card-footer text-muted">
@@ -91,7 +92,7 @@
                     <h5 class="card-title">{{ post.title }}</h5>
                     <p class="card-text"><small class="text-muted">By {{ post.author }}</small></p>
                     <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
-                    <a href="{% url 'post_detail' post.slug %}" class="btn btn-outline-primary mt-auto">Read More</a>
+                    <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">Read More</a>
                 </div>
                 <div class="card-footer text-muted">
                     Published on {{ post.created_on }}
