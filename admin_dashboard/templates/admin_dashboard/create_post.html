@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Center the form on the page -->
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Use Bootstrap card for a modern look -->
+            <div class="card">
+                <div class="card-header">
+                    <!-- Form title -->
+                    <h2 class="m-0">Create a New Post</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Form tag with multipart/form-data for file uploads -->
+                    <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        {% csrf_token %}
+                        <!-- Render the form fields with Crispy Forms -->
+                        {{ form|crispy }}
+                        <!-- Submit button with Bootstrap large button styling -->
+                        <div class="form-group text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Create Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

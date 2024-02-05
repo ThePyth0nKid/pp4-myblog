@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from .views import admin_messages, create_post
 
 
 urlpatterns = [
-    path('', views.admin_messages, name='admin_dashboard'),
+    path('', admin_messages, name='admin_dashboard'),
+    path('create/', create_post, name='create-post')
 ]
