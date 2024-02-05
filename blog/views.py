@@ -73,7 +73,25 @@ def post_detail(request, slug):
 # This view handles comment editing functionality.
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    Handles the editing of a comment by a POST request on a specific post.
+
+    This view function allows users to edit their comments on a blog post. It first checks if the request is a POST. 
+    If so, it attempts to fetch the specific post and comment using the provided `slug` and `comment_id`. 
+    It then creates a `CommentForm` instance with the POST data and the comment instance to be edited. 
+    If the form is valid and the user making the request is the author of the comment, it updates the comment,
+    marks it as not approved, and saves it. A success message is added to the messages framework. 
+    If there are any errors, an error message is added instead.
+
+    Parameters:
+    - request (HttpRequest): The HTTP request sent to the view, containing method and POST data.
+    - slug (str): The slug of the post to which the comment belongs. Used to identify the specific post.
+    - comment_id (int): The ID of the comment to be edited. Used to identify the specific comment.
+
+    Returns:
+    - HttpResponseRedirect: Redirects to the detail page of the post after the comment is updated or if an error occurs.
+    
+    Raises:
+    - Http404: If no post or comment matching the provided slug and ID is found.
     """
     if request.method == "POST":
 
