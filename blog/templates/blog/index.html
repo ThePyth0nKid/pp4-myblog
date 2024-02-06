@@ -4,19 +4,18 @@
 
 <div class="container mt-4">
     {% if page_obj.number == 1 %}
-    <!-- Welcome Section for first page only -->
+    <!-- Welcome Section for the first page only -->
     <div class="bg-light py-5">
         <div class="container text-center">
             <h1 class="mb-3">Welcome to The 3yAGI Blog</h1>
             <p class="lead">
                 In this blog, Nelson Mehlis dives into the fast-evolving world of technology with a focus on the race
                 towards Artificial General Intelligence (AGI). Over the next three years, he'll share insights from the
-                trenches of
-                software development, inspired by visionaries like Sam Altman and Elon Musk. Expect tales of challenges,
-                breakthroughs, and
-                the day-to-day life of a junior developer on the cusp of the future. This blog is your window into the
-                journey toward
-                AGI. Welcome aboard!
+                trenches of software development, inspired by visionaries like Sam Altman and Elon Musk. Expect tales of
+                challenges,
+                breakthroughs, and the day-to-day life of a junior developer on the cusp of the future. This blog is
+                your window into the
+                journey toward AGI. Welcome aboard!
             </p>
         </div>
     </div>
@@ -40,9 +39,10 @@
                     <p class="card-text">{{ post_list.0.excerpt }}</p>
                     <!-- Displaying author info -->
                     <p class="card-text"><small class="text-muted">By {{ post_list.0.author }}</small></p>
-                    <!-- Displaying publication date -->
-                    <!-- Read More button -->
+                    <!-- Only render the Read More button if the post has a slug -->
+                    {% if post_list.0.slug %}
                     <a href="{% url 'post_detail' post_list.0.slug %}" class="btn btn-primary">Read More</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -66,8 +66,10 @@
                     <p class="card-text"><small class="text-muted">By {{ post.author }}</small></p>
                     <!-- Post excerpt -->
                     <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
-                    <!-- Read More button aligned at the bottom -->
-                    <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">Read More</a>
+                    <!-- Only render the Read More button if the post has a slug -->
+                    {% if post.slug %}
+                    <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary mt-auto">Read More</a>
+                    {% endif %}
                 </div>
                 <!-- Displaying publication date -->
                 <div class="card-footer text-muted">
@@ -78,7 +80,7 @@
         {% endfor %}
     </div>
     {% else %}
-    <!-- For page 2 and beyond, adjust the slice to show six posts -->
+    <!-- For page 2 and beyond, adjust the slice to show all posts as per pagination -->
     <div class="row">
         {% for post in post_list %}
         <div class="col-md-4 d-flex align-items-stretch">
@@ -92,7 +94,10 @@
                     <h5 class="card-title">{{ post.title }}</h5>
                     <p class="card-text"><small class="text-muted">By {{ post.author }}</small></p>
                     <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
+                    <!-- Only render the Read More button if the post has a slug -->
+                    {% if post.slug %}
                     <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">Read More</a>
+                    {% endif %}
                 </div>
                 <div class="card-footer text-muted">
                     Published on {{ post.created_on }}

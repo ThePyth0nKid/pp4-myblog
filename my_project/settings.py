@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-thepyth0nkid-pp4-myblog-l43pa5ri7f.us2.codeanyapp.com', '.herokuapp.com']
@@ -65,6 +65,50 @@ LOGOUT_REDIRECT_URL = '/'  # Redirect to home page after logout
 # Crispy Forms Settings
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+SUMMERNOTE_CONFIG = {
+    # Choose whether to use the Iframe mode (True) or the Inplace mode (False)
+    'iframe': False,  # Adjust this value as needed
+
+    'summernote': {
+        # Specific settings for Summernote
+        'airMode': False,
+        'width': '100%',
+        'height': '480',
+        'lang': 'ko-KR',  # Ensure only one 'lang' definition is present
+
+        # Toolbar customization
+        'toolbar': [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['fontname', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+        ],
+    },
+
+    # Further settings
+    'attachment_require_authentication': True,
+    'disable_attachment': False,
+    'attachment_absolute_uri': False,
+    # Ensure this function is properly defined
+    'test_func_upload_view': 'example_test_func',
+
+    # Custom CSS/JS for SummernoteWidget and SummernoteInplaceWidget
+    'css': (
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/theme/monokai.min.css',
+    ),
+    'js': (
+    ),
+
+    'lazy': True,
+}
+
+# Ensure functions like example_test_func and my_custom_upload_to_func are properly defined in your Django project files.
+
+
+SUMMERNOTE_THEME = 'bs5'  # Show summernote with Bootstrap4
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
