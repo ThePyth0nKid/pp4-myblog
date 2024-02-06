@@ -172,9 +172,6 @@ def comment_delete(request, slug, comment_id):
     comment is deleted or if an error occurs.
 
     Notes:
-    - The view assumes that the `Post` and `Comment` models exist and are
-    appropriately defined with a `status` field
-      for `Post` and an `author` field for `Comment`.
     - The view relies on the user being authenticated and matching the author
     of the comment for deletion to proceed.
     - Uses Django's messaging framework to provide feedback to the user about

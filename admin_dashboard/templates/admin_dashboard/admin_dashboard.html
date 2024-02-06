@@ -22,6 +22,12 @@
 
             <!-- Display 'slug' field -->
             <p class="mb-0"><strong>Slug:</strong> {{ contact.slug }}</p>
+
+            <!-- Delete Button -->
+            <form action="{% url 'delete_contact' contact.slug %}" method="post" class="mt-2">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
         </div>
         {% endfor %}
     </div>

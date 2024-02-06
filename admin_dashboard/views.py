@@ -30,6 +30,35 @@ def admin_messages(request):
         return redirect('home')
 
 
+def delete_contact(request, slug):
+    """
+    Deletes a contact object based on its slug. If the request method is POST,
+    it deletes the contact and redirects to the admin dashboard with a success message.
+    Otherwise, it renders the admin dashboard template with the contact context.
+
+    Args:
+        request: HttpRequest object.
+        slug: The slug of the Contact object to be deleted.
+
+    Returns:
+        HttpResponse: Redirects to the admin dashboard if the contact is successfully deleted.
+        Otherwise, renders the admin dashboard template with the contact context.
+    """
+    # Fetch the Contact object based on slug or return 404 if not found.
+    contact = get_object_or_404(Contact, slug=slug)
+
+    # Check if the request is a POST request to delete the contact.
+    if request.method == 'POST':
+        contact.delete()
+        messages.success(request, 'Contact was successfully deleted.')
+        # Redirect to the admin dashboard view; replace 'admin_dashboard' with the name of your dashboard view.
+        return redirect('admin_dashboard')
+
+    # If not a POST request, render the admin dashboard template with the contact.
+    # Replace 'admin_dashboard.html' with the name of your dashboard template.
+    return render(request, 'admin_dashboard.html', {'contact': contact})
+
+    
 @login_required
 def create_post(request, slug=None):
     """
