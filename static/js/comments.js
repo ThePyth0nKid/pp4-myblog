@@ -1,13 +1,12 @@
-// Script for enabling comment editing by loading content into a form and updating the submit action.
 const editButtons = document.getElementsByClassName("btn-edit");
 const commentText = document.getElementById("id_body");
 const commentForm = document.getElementById("commentForm");
 const submitButton = document.getElementById("submitButton");
 
-// Initialize the delete confirmation modal and select the delete and confirm buttons.
-const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+// Initialize the delete confirmation modal for comments and select the delete and confirm buttons.
+const deleteCommentModal = new bootstrap.Modal(document.getElementById("deleteCommentModal"));
 const deleteButtons = document.getElementsByClassName("btn-delete");
-const deleteConfirm = document.getElementById("deleteConfirm");
+const deleteCommentConfirm = document.getElementById("deleteCommentConfirm");
 
 /**
 * Initializes edit functionality for the provided edit buttons.
@@ -34,15 +33,15 @@ for (let button of editButtons) {
 * 
 * For each button in the `deleteButtons` collection:
 * - Retrieves the associated comment's ID upon click.
-* - Updates the `deleteConfirm` link's href to point to the 
+* - Updates the `deleteCommentConfirm` link's href to point to the 
 * deletion endpoint for the specific comment.
-* - Displays a confirmation modal (`deleteModal`) to prompt 
+* - Displays a confirmation modal (`deleteCommentModal`) to prompt 
 * the user for confirmation before deletion.
 */
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
         let commentId = e.target.getAttribute("comment_id");
-        deleteConfirm.href = `delete_comment/${commentId}`;
-        deleteModal.show();
+        deleteCommentConfirm.href = `delete_comment/${commentId}`;
+        deleteCommentModal.show();
     });
 }
