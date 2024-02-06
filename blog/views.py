@@ -54,7 +54,7 @@ def post_detail(request, slug):
     - HttpResponse: Renders the `blog/post_detail.html` template with the post
     details, comments, and comment form context.
     """
-    queryset = Post.objects.filter(status=1)
+    queryset = Post.objects.all()
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.count()
@@ -125,7 +125,7 @@ def comment_edit(request, slug, comment_id):
     """
     if request.method == "POST":
 
-        queryset = Post.objects.filter(status=1)
+        queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
@@ -180,7 +180,7 @@ def comment_delete(request, slug, comment_id):
     - Uses Django's messaging framework to provide feedback to the user about
     the action's success or failure.
     """
-    queryset = Post.objects.filter(status=1)
+    queryset = Post.objects.all()
     post = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 

@@ -27,7 +27,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'slug', 'featured_image',
-                  'content', 'status', 'excerpt', 'updated_on']
+                  'content', 'excerpt', 'updated_on']
         widgets = {
             # Apply Django Summernote to the 'content' field for rich text editing.
             'content': SummernoteWidget(),
