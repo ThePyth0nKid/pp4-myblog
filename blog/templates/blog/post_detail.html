@@ -41,14 +41,13 @@
         <div class="col-12">
             <a href="{% url 'edit_post' slug=post.slug %}" class="btn btn-primary">Edit</a>
             <!-- Button to open delete confirmation modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletePostModal"
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"
                 data-postslug="{{ post.slug }}">Delete</button>
         </div>
     </div>
     {% endif %}
     <!-- Delete confirmation modal for post -->
-    <div class="modal fade" id="deletePostModal" tabindex="-1" aria-labelledby="deletePostModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deletePostModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -61,7 +60,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a id="deletePostConfirm" href="#" class="btn btn-danger">Delete</a>
+                    <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>
@@ -79,25 +78,28 @@
     </div>
     <!-- Displaying Comments -->
     <div class="row">
-        <div class="col-md-8 card mb-4 mt-3">
+        <div class="col-md-8 card mb-4 mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- Loop through each comment in comments -->
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div class="p-2 comments ">
+                <div
+                    class="p-2 comments">
                     <p class="font-weight-bold">
                         {{ comment.author }}
-                        <span class="font-weight-normal"> {{ comment.created_on }} </span>
-                        wrote:
+                        <span class="font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
                     </p>
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-primary" comment_id="{{ comment.id }}">Edit</button>
-                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
                 </div>
+                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
@@ -121,12 +123,11 @@
     </div>
 </div>
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteCommentModal" tabindex="-1" aria-labelledby="deleteCommentModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteCommentModalLabel">Delete comment?</h5>
+                <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -135,7 +136,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a id="deleteCommentConfirm" href="#" class="btn btn-danger">Delete</a>
+                <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
