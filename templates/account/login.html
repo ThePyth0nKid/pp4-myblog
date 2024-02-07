@@ -10,9 +10,10 @@
             <h3 class="text-center">{% trans "Sign In" %}</h3>
 
             <p class="text-center">
-                {% blocktrans %}Welcome back to the 3yAGI blog. To leave a comment or like a post, please log in. If you
-                have not created an account yet, then <a class="link text-primary" href="{{ signup_url }}">sign up</a>
-                first.{% endblocktrans %}
+                Welcome to the 3yAGI Blog, where we explore the frontiers of Artificial General Intelligence (AGI). Engage with our
+                community by logging in to share your insights. If you're new here, <a class="link text-primary"
+                    href="{{ signup_url }}">join us</a> by creating an account and start contributing to the conversation around
+                AGI's future.
             </p>
 
             <form class="login" method="POST" action="{% url 'account_login' %}">

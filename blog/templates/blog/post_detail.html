@@ -2,19 +2,19 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-<!-- Start content -->
+<!-- Start of content block -->
 {% block content %}
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
+                <!-- Displays the post title -->
                 <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
+                <!-- Displays the post author and the creation date -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- Conditional Image Display for the post -->
+                <!-- Conditional display for the post's featured image. Shows a default image if the post's featured image is a placeholder -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="{% static 'images/default.png' %}" class="card-img-top new-post" alt="Default image">
                 {% else %}
@@ -29,25 +29,24 @@
     <div class="row">
         <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
+                <!-- Displays the post content, using the | safe filter to render HTML properly -->
                 <p class="card-text">{{ post.content | safe }}</p>
             </div>
         </div>
     </div>
-    <!-- Display edit and delete buttons for superusers -->
+    <!-- Buttons for editing and deleting a post are displayed only to superusers -->
     {% if user.is_superuser %}
     <div class="row">
         <div class="col-12">
-            <!-- Link/Button zum Bearbeiten eines Posts -->
+            <!-- Link/Button to edit a post -->
             <a href="{% url 'edit_post' slug=post.slug %}" class="btn btn-primary">Edit</a>
-            <!-- Button, um das Lösch-Bestätigungsmodal zu öffnen -->
+            <!-- Button to open the delete confirmation modal -->
             <button type="button" class="btn btn-danger delete-post-button" data-postslug="{{ post.slug }}"
                 data-bs-toggle="modal" data-bs-target="#postModal">Delete</button>
         </div>
     </div>
     {% endif %}
-    <!-- Modal-Struktur -->
+    <!-- Modal structure for post deletion confirmation -->
     <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -66,9 +65,7 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Displaying count of comments -->
+    <!-- Displaying the count of comments -->
     <div class="row">
         <div class="col-12">
             <strong class="text-secondary">
@@ -84,10 +81,9 @@
         <div class="col-md-8 card mb-4 mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                <!-- Loop through each comment and display it -->
                 {% for comment in comments %}
-                <div
-                    class="p-2 comments">
+                <div class="p-2 comments">
                     <p class="font-weight-bold">
                         {{ comment.author }}
                         <span class="font-weight-normal">
@@ -97,16 +93,16 @@
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
+                    <!-- Edit and delete buttons for comments, shown only to authenticated users who are the authors of the comment -->
                     {% if user.is_authenticated and comment.author == user %}
                     <button class="btn btn-primary btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
                     <button class="btn btn-danger btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
                     {% endif %}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
-        <!-- Creating New Comments -->
+        <!-- Form to create a new comment -->
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 {% if user.is_authenticated %}
@@ -125,7 +121,7 @@
         </div>
     </div>
 </div>
-<!-- Delete confirmation modal -->
+<!-- Modal structure for comment deletion confirmation -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
