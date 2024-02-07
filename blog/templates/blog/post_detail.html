@@ -94,9 +94,13 @@
                         {{ comment.body | linebreaks }}
                     </div>
                     <!-- Edit and delete buttons for comments, shown only to authenticated users who are the authors of the comment -->
-                    {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-primary btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
-                    <button class="btn btn-danger btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+                    {% if user.is_authenticated %}
+                        {% if comment.author == user %}
+                        <button class="btn btn-primary btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                        <button class="btn btn-danger btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+                        {% elif user.is_superuser %}
+                        <button class="btn btn-danger btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+                        {% endif %}
                     {% endif %}
                 </div>
                 {% endfor %}
