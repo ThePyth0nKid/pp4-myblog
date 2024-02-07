@@ -6,7 +6,7 @@
 
 ## Live Site
 
-[Go to application]()
+[Go to application](https://my-blog-with-django-60cc368e0bbd.herokuapp.com/)
 
 ## Repository
 
@@ -47,33 +47,44 @@
 ---
 
 <h2 id="about-the-project">About the Project</h2>
+"3yAGI," or "3 Years to AGI," stands as my fourth portfolio project during my journey as a Full-Stack Software Developer student at the Code Institute. This endeavor was particularly significant as it aimed to develop a Minimum Viable Product (MVP) utilizing agile software development methodologies. Central to this endeavor was the effective digital management of agile methods through GitHub, ensuring transparent and efficient project steering.
 
-"3yAGI", standing for "3 Years to AGI", is my fourth portfolio project as a Full-Stack Software Developer student at the Cod Institute. This project, the first of such magnitude in my studies, aimed to create a Minimum Viable Product (MVP) using agile software development methodologies. A key aspect of the project was the digital management of these agile methods through GitHub, enabling transparent and efficient project steering.
+To facilitate a comprehensive understanding of the development process, I invested in a whiteboard, which became a cornerstone tool. Through practical application of agile methods, I continuously designed, updated, and refined the project, documenting progress via photo documentation for thorough visualization.
 
-To effectively manage and continuously develop the project, I invested in a whiteboard. This became a central tool, allowing me to practically apply my knowledge of agile methods. I continuously designed, updated, and refined the project, documenting the progress through photos and sharing these with interested parties.
+At the core of 3yAGI lies a blog website developed with Django for backend functionality and Bootstrap for frontend design. A PostgreSQL database ensures robust data management, while Cloudinary serves as the platform for image storage. The blog provides a platform for bloggers and readers to exchange experiences, insights, uncertainties, and reflections not only within software development but also across the spectrum of Artificial Intelligence (AI) and Artificial General Intelligence (AGI).
 
-The core of 3yAGI is a blog website, developed using Django as the backend framework and Bootstrap for the frontend. The integration of a PostgreSQL database ensures robust data management, while Cloudinary is used for image storage. The blog provides a platform for bloggers and readers to share and explore experiences, achievements, doubts, and thoughts not only about software development but also about all aspects of Artificial Intelligence (AI) and Artificial General Intelligence (AGI).
+An intriguing aspect of this project is its temporal dimension. "3yAGI" symbolizes a three-year journey aimed at tracking and reflecting on advancements in AI and AGI. It serves as a tangible representation of evaluating the feasibility of achieving AGI within this timeframe. Consequently, this project represents both technological progression and personal development, encapsulating the ethos of learning, sharing, and evolving within the domains of software development and AI research, with a primary focus on delivering a robust Minimum Viable Product.
 
-A unique aspect of this project is its temporal dimension. "3yAGI" symbolizes a three-year journey aimed at tracking and reflecting on developments in the field of AI and AGI. It's about assessing whether the ambitious goal of achieving AGI can be realized within this timeframe. Thus, this project stands as a testament to both technological advancement and personal growth, embodying the essence of learning, sharing, and developing in the realms of software development and AI research.
+<h2 id="plannig">About the Project</h2>
+
 
 <h2 id="target-group">Target Group</h2>
+The target group for the "3yAGI" project includes software developers and AI enthusiasts, as well as tech enthusiasts, students, and the general public interested in exploring software development and artificial intelligence.
 
+### Blogger
+As blogger, you can publish your posts, sharing your thoughts and experiences in the realm of software development and artificial intelligence. Here, you have the opportunity to document your personal insights, challenges, and reflections, engaging in discussions with the readers. You can also read and respond to comments from readers, fostering interactive exchange and dialogue.
 
-### Customers
-
-
-
-### Partners
-
-
+### Reader
+As a reader, you can sign up to posts and write comments. You can explore Nelson's perspectives and opinions, benefiting from his experiences. On this page, you can stay updated on the latest developments in artificial intelligence, learn about current trends, and share your own thoughts and questions. Your comments can contribute to lively discussion and constructive exchange with Nelson and other readers.
 
 ---
 
 <h2 id="user-experince">UXD - User Experince Design</h2>
-To thoroughly understand the customer journey, I crafted a narrative depicting a typical customer experience. Based on this, I developed wireframes that directly reflected the insights gained from these user stories, laying a solid foundation for the project.
+To enhance user experience on my blog focused on Artificial General Intelligence (AGI), I crafted a narrative illustrating a potential user journey.
+
+As a foundation for the project, I developed wireframes based on user stories and the customer/partner flow.
+
 
 <h3 id="storytelling"></h3>
+Max is an aspiring developer with a keen interest in artificial intelligence, particularly in the development of Artificial General Intelligence (AGI).
 
+When he discovers my blog about AGI, Max is thrilled by the articles and discussions about the latest advancements and challenges in this field. He decides to delve deeper into the subject and learn more about how AGI could influence the future.
+
+Through the posts on my blog, Max gains insights into various aspects of AGI development, from fundamental concepts to ethical and societal implications. He is impressed by the diversity of topics and the quality of information he finds on my blog.
+
+After reading several articles, Max decides to reach out to an AGI development firm mentioned in a post on my blog. He visits their website to learn more about their work and projects, and he is impressed by what he sees.
+
+Max chooses to sign up for a newsletter and receives regular updates on the latest developments and advancements in the field of AGI. Through my blog and associated resources, Max can deepen his knowledge of AGI and actively engage in discussions about it.
 
 <h3 id="wireframe">Wireframes</h3>
 
@@ -137,13 +148,6 @@ Footer
 
 
 ![mockup and cta]()
-
-
-![step-by-step]()
-
-The step-by-step explains in details how the applications work and we want to show that to attract the user who want to understand more before making a decision.
-
-![quote]()
 
 <h3 id="signup">Signup</h3>
 The user is using the same signup page and chooses type of account, customer or partner, due to which type of account they will use.
