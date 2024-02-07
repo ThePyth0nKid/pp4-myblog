@@ -39,19 +39,20 @@
     {% if user.is_superuser %}
     <div class="row">
         <div class="col-12">
+            <!-- Link/Button zum Bearbeiten eines Posts -->
             <a href="{% url 'edit_post' slug=post.slug %}" class="btn btn-primary">Edit</a>
-            <!-- Button to open delete confirmation modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"
-                data-postslug="{{ post.slug }}">Delete</button>
+            <!-- Button, um das Lösch-Bestätigungsmodal zu öffnen -->
+            <button type="button" class="btn btn-danger delete-post-button" data-postslug="{{ post.slug }}"
+                data-bs-toggle="modal" data-bs-target="#postModal">Delete</button>
         </div>
     </div>
     {% endif %}
-    <!-- Delete confirmation modal for post -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deletePostModalLabel" aria-hidden="true">
+    <!-- Modal-Struktur -->
+    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deletePostModalLabel">Delete Post?</h5>
+                    <h5 class="modal-title" id="postModalLabel">Delete Post?</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -60,11 +61,13 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+                    <a id="postConfirm" href="#" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>
     </div>
+
+
     <!-- Displaying count of comments -->
     <div class="row">
         <div class="col-12">
@@ -95,8 +98,8 @@
                         {{ comment.body | linebreaks }}
                     </div>
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-primary btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-danger btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
                     {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
@@ -111,7 +114,7 @@
                 <p>Posting as: {{ user.username }}</p>
                 <form id="commentForm" method="post" style="margin-top: 1.3em">
                     {{ comment_form|crispy }} {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">
+                    <button id="submitButton" type="submit" class="btn btn-danger btn-lg">
                         Submit
                     </button>
                 </form>

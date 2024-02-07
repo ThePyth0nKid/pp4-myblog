@@ -1,7 +1,7 @@
 [
     {
         "model": "blog.post",
-        "pk": null,
+        "pk": 1,
         "fields": {
             "title": "The Promise and Perils of AGI",
             "slug": "the-promise-and-perils-of-agi",
@@ -14,7 +14,7 @@
     },
     {
         "model": "blog.post",
-        "pk": null,
+        "pk": 2,
         "fields": {
             "title": "AGI and the Future of Work",
             "slug": "agi-and-the-future-of-work",
@@ -27,7 +27,7 @@
     },
     {
         "model": "blog.post",
-        "pk": null,
+        "pk": 3,
         "fields": {
             "title": "Ethical Considerations in AGI Development",
             "slug": "ethical-considerations-in-agi-development",

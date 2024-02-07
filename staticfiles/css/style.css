@@ -183,8 +183,7 @@ body {
     /* Changes the link color on hover */
 }
 
-.btn-signup,
-.btn-edit {
+.btn-signup {
     background-color: var(--accent-color);
     /* Sets the button background color */
     color: #fff;
@@ -208,37 +207,58 @@ body {
     /* Adds a border on hover for emphasis */
 }
 
-.link,
-.btn-like,
-.btn-delete {
-    color: var(--accent-color);
-    /* Sets the color to the accent color for visibility */
-    transition: transform 0.2s ease;
-    /* Smooth transform transition for interactive elements */
-}
-
-.link:hover,
-.btn-like:hover {
-    transform: scale(1.1);
-    /* Slightly enlarges the element on hover for emphasis */
-}
-
-.btn-delete {
-    background-color: var(--accent-color);
-    /* Sets the button background color */
+.btn-edit-primary {
+    background-color: var(--primary-color);
+    /* Uses the primary color variable for background */
     color: #fff;
-    /* Sets the text color to white */
+    /* White text color */
     border: none;
-    /* Removes the default border */
+    /* Removes the standard border */
     padding: 8px 15px;
     /* Adds padding for size and comfort */
     border-radius: 4px;
     /* Rounds the corners of the button */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for background color and transformation */
 }
 
-.btn-delete:hover {
+.btn-edit-primary:hover,
+.btn-edit-primary:focus {
+    background-color: darken(var(--primary-color), 10%);
+    /* Darkens the primary color on hover or focus */
+    color: #ffffff;
+    /* Text color remains white */
+    transform: scale(1.05);
+    /* Slightly enlarges the button */
+    box-shadow: 0 2px 10px rgba(var(--primary-color), 0.5);
+    /* Adds a subtle shadow */
+}
+
+.btn-delete-accent {
+    background-color: var(--accent-color);
+    /* Uses the accent color variable for background */
+    color: #fff;
+    /* White text color */
+    border: none;
+    /* Removes the standard border */
+    padding: 8px 15px;
+    /* Adds padding for size and comfort */
+    border-radius: 4px;
+    /* Rounds the corners of the button */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for background color and transformation */
+}
+
+.btn-delete-accent:hover,
+.btn-delete-accent:focus {
     background-color: darken(var(--accent-color), 10%);
-    /* Darkens the button background color on hover for a pressed effect */
+    /* Darkens the accent color on hover or focus */
+    color: #ffffff;
+    /* Text color remains white */
+    transform: scale(1.05);
+    /* Slightly enlarges the button */
+    box-shadow: 0 2px 10px rgba(var(--accent-color), 0.5);
+    /* Adds a subtle shadow */
 }
 
 .footer a {
@@ -271,8 +291,7 @@ body {
     }
 }
 
-a:focus,
-button:focus {
+a:focus {
     outline: 3px solid var(--accent-color);
     /* Adds a focus outline to improve accessibility */
     outline-offset: 2px;
