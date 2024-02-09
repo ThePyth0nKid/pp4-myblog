@@ -2,7 +2,7 @@
 
 ## Title: 3yAGI
 
-![Mockup Image]()
+![Mockup Image](docs/images/mockup.png)
 
 ## Live Site
 
@@ -55,7 +55,7 @@ At the core of 3yAGI lies a blog website developed with Django for backend funct
 
 An intriguing aspect of this project is its temporal dimension. "3yAGI" symbolizes a three-year journey aimed at tracking and reflecting on advancements in AI and AGI. It serves as a tangible representation of evaluating the feasibility of achieving AGI within this timeframe. Consequently, this project represents both technological progression and personal development, encapsulating the ethos of learning, sharing, and evolving within the domains of software development and AI research, with a primary focus on delivering a robust Minimum Viable Product.
 
-<h2 id="plannig">About the Project</h2>
+<h2 id="plannig">Planing</h2>
 
 
 <h2 id="target-group">Target Group</h2>
@@ -72,7 +72,7 @@ As a reader, you can sign up to posts and write comments. You can explore Nelson
 <h2 id="user-experince">UXD - User Experince Design</h2>
 To enhance user experience on my blog focused on Artificial General Intelligence (AGI), I crafted a narrative illustrating a potential user journey.
 
-As a foundation for the project, I developed wireframes based on user stories and the customer/partner flow.
+As a foundation for the project, I developed wireframes based on user stories and the blogger/reader flow.
 
 
 <h3 id="storytelling"></h3>
@@ -84,7 +84,7 @@ Through the posts on my blog, Max gains insights into various aspects of AGI dev
 
 After reading several articles, Max decides to reach out to an AGI development firm mentioned in a post on my blog. He visits their website to learn more about their work and projects, and he is impressed by what he sees.
 
-Max chooses to sign up for a newsletter and receives regular updates on the latest developments and advancements in the field of AGI. Through my blog and associated resources, Max can deepen his knowledge of AGI and actively engage in discussions about it.
+Max can deepen his knowledge of AGI and actively engage in discussions about it.
 
 <h3 id="wireframe">Wireframes</h3>
 
