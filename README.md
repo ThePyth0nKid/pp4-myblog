@@ -91,14 +91,14 @@ As blogger, you can publish your posts, sharing your thoughts and experiences in
 
 ### Reader
 
-As a reader, you can sign up to posts and write comments. You can explore Nelson's perspectives and opinions, benefiting from his experiences. On this page, you can stay updated on the latest developments in artificial intelligence, learn about current trends, and share your own thoughts and questions. Your comments can contribute to lively discussion and constructive exchange with Nelson and other readers.
+As a reader, you can sign up to posts and write comments. You can explore Blogger's perspectives and opinions, benefiting from his experiences. On this page, you can stay updated on the latest developments in artificial intelligence, learn about current trends, and share your own thoughts and questions. Your comments can contribute to lively discussion and constructive exchange with Nelson and other readers.
 
 ---
 
 <h2 id="user-experince">UXD - User Experince Design</h2>
 To enhance user experience on my blog focused on Artificial General Intelligence (AGI), I crafted a narrative illustrating a potential user journey.
 
-As a foundation for the project, I developed wireframes based on user stories and the blogger/reader flow.
+As a foundation for the project, I developed wireframes based on user stories.
 
 <h3 id="storytelling"></h3>
 Max is an aspiring developer with a keen interest in artificial intelligence, particularly in the development of Artificial General Intelligence (AGI).
@@ -122,17 +122,13 @@ Max can deepen his knowledge of AGI and actively engage in discussions about it.
 
 ### User Views
 
-![user overview](docs/images/contactme)
+![user overview](docs/images/contactme.png)
 ![user request details](docs/images/leaveacomment.png)
 
 ### Blogger Views
 
 ![user overview](docs/images/messages.png)
 ![user request details](docs/images/editpost.png)
-
-<h3 id="flowchart">Flowchart</h3>
-
-![flowchart]()
 
 ---
 
@@ -160,14 +156,14 @@ As a **user/reader** I can **bookmark or save my favorite blog posts** so that *
 To maintain a consistent layout throughout the application, Django dynamic pages are used for the navbar and footer.
 
 Navbar
-![navbar]()
+![navbar](docs/images/navbarnotregister.png)
 
 Footer
-![footer]()
+![footer](docs/images/footer.png)
 
 <h3 id="homepage">Homepage</h3>
 
-![hero]()
+![hero and about]()
 
 ![mockup and cta]()
 
