@@ -30,7 +30,7 @@ def admin_messages(request):
         return redirect('home')
 
 
-def delete_contact(request, id, slug=None):
+def delete_contact(request, id):
     """
     Deletes a contact object based on its slug. If the request method is POST,
     it deletes the contact and redirects to the admin dashboard with a success message.
