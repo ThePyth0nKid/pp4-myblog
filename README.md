@@ -139,27 +139,20 @@ Max can deepen his knowledge of AGI and actively engage in discussions about it.
 <h2 id="user-stories">User Stories</h2>
 
 * As a **blogger** I can **create a new blog post** so that **I can share my thoughts and experiences with my audience**.
-
-### Acceptance Criteria
-
-* When I log in to the blog platform, I should see a "Create New Post" button.
-* The create post page should include fields for the title, content, and any relevant metadata.
-* After submitting the new post, it should be immediately visible on the blog.
-
----
-
-*
-*
-*
-*
-*  
-*
-*
-*
-*
-*
-
----
+* As a **user**, I can **register for an account** so that **I can have a personalized experience on the blog platform**.
+* As a **reader**, I can **view blog posts** so that **I can stay informed about the blogger's content**.
+* As a **reader**, I can **leave comments on blog posts** so that **I can share my thoughts and engage with the content**.
+* As a **blogger**, I can **delete blog posts** so that **my blog remains organized and trustworthy**.
+* As a **blogger**, I can **edit my existing blog posts** so that **I can keep my content up-to-date and accurate**.
+* As a **reader**, I can **leave comments on blog posts** so that **I can share my thoughts and engage with the content**.
+* As a **reader** I can **easily find and use a "Contact Me" feature,** so that **I can quickly get in touch with the website owner for inquiries, feedback, or support**.
+* As a **user**, I want the blog website to be **accessible and user-friendly on various devices** so that **I can enjoy a seamless experience regardless of the device I'm using**.
+* As a **registered user** I can **edit and delete my comments** so that **can correct mistakes or remove outdated information**.
+* As a **blogger** I can **enhance my blog posts with images** so that **I can visually engage and communicate with my audience**.
+* As a **blogger** I can **access and view messages sent through the 'Contact Me' form** so that **I can efficiently manage and respond to user inquiries and feedback**.
+* As a **reader** I can **view a paginated list of blog posts** so that **I can easily navigate through the content and explore multiple posts without overwhelming scrolling.**.
+* As a **visitor to the website** I can **view the 'About Me' page** so that **I can learn more about the website owner, their background, interests, and professional journey.**.
+As a **user/reader** I can **bookmark or save my favorite blog posts** so that **can easily revisit and share them later**.
 
 <h2 id="surface-plan">The Surface Plane</h2>
 
