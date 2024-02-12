@@ -15,10 +15,11 @@
             <p class="card-text"><small class="text-muted">Created At: {{ contact.created_at }}</small></p>
         </div>
         <div class="card-footer bg-transparent">
-            <form action="{% url 'delete_contact' contact.slug %}" method="post">
+            <form action="{% url 'delete_contact' contact.id %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
+
         </div>
     </div>
     {% endfor %}

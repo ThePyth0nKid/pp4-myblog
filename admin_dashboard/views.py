@@ -30,7 +30,7 @@ def admin_messages(request):
         return redirect('home')
 
 
-def delete_contact(request, slug):
+def delete_contact(request, id, slug=None):
     """
     Deletes a contact object based on its slug. If the request method is POST,
     it deletes the contact and redirects to the admin dashboard with a success message.
@@ -45,7 +45,7 @@ def delete_contact(request, slug):
         Otherwise, renders the admin dashboard template with the contact context.
     """
     # Fetch the Contact object based on slug or return 404 if not found.
-    contact = get_object_or_404(Contact, slug=slug)
+    contact = get_object_or_404(Contact, id=id)
 
     # Check if the request is a POST request to delete the contact.
     if request.method == 'POST':
