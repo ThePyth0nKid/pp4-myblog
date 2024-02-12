@@ -113,17 +113,22 @@ Max can deepen his knowledge of AGI and actively engage in discussions about it.
 
 <h3 id="wireframe">Wireframes</h3>
 
-![frontpage]()
-![frontpage#2]()
+![frontpage](docs/images/frontpage1.png)
+![frontpage#2](docs/images/frontpage2.png)
+![user overview](docs/images/viewpost.png)
 
-![register account]()
-![login]()
+![register account](docs/images/signup.png)
+![login](docs/images/signin.png)
 
-### User loged in
+### User Views
 
-![user overview]()
-![user request details]()
-![user presented candidates]()
+![user overview](docs/images/contactme)
+![user request details](docs/images/leaveacomment.png)
+
+### Blogger Views
+
+![user overview](docs/images/messages.png)
+![user request details](docs/images/editpost.png)
 
 <h3 id="flowchart">Flowchart</h3>
 
