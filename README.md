@@ -163,19 +163,18 @@ Footer
 
 <h3 id="homepage">Homepage</h3>
 
-![hero and about]()
+![hero and about](docs/images/heroandabout.png)
 
-![mockup and cta]()
+![post list](docs/images/postlist1.png)
 
 <h3 id="signup">Signup</h3>
-The user is using the same signup page and chooses type of account, customer or partner, due to which type of account they will use.
 
-![signup]()
+![signup](docs/images/signuppage.png)
 
 <h3 id="login">Login</h3>
 Its easy to login for returning user. Just fill in your username and password and you get logged in.
 
-![login]()
+![login](docs/images/signinpage.png)
 
 <h3 id="blogger-overview">Blogger Overview</h3>
 
