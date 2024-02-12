@@ -61,7 +61,7 @@ An intriguing aspect of this project is its temporal dimension. "3yAGI" symboliz
 
 In the execution of my project, I fully leveraged the tools and methods available to me: the whiteboard and GitHub. These tools enabled me to effectively apply agile methodologies, ensuring a transparent and efficient approach to project management. Despite careful planning and the use of these modern aids, I encountered numerous unforeseen insights that were not part of my original plan.
 
-![whiteboard](docs/images/mockup.png)
+![whiteboard](docs/images/whiteboard.png)
 
 ### Adaptation and Learning: The Art of Agile Development
 

@@ -2,35 +2,26 @@
 
 {% block content %}
 <div class="container mt-4 mb-5">
-    <!-- Added mb-5 for spacing from the footer -->
     <h2 class="mb-4">Admin Messages</h2>
     {% if contacts %}
-    <div class="list-group">
-        {% for contact in contacts %}
-        <div class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">{{ contact.name }}</h5>
-                <small>{{ contact.email }}</small>
-            </div>
-            <p class="mb-1">{{ contact.message }}</p>
-
-            <!-- Display 'subject' field -->
-            <p class="mb-0"><strong>Subject:</strong> {{ contact.subject }}</p>
-
-            <!-- Display 'created_at' field -->
-            <p class="mb-0"><strong>Created At:</strong> {{ contact.created_at }}</p>
-
-            <!-- Display 'slug' field -->
-            <p class="mb-0"><strong>Slug:</strong> {{ contact.slug }}</p>
-
-            <!-- Delete Button -->
-            <form action="{% url 'delete_contact' contact.slug %}" method="post" class="mt-2">
+    {% for contact in contacts %}
+    <div class="card mb-3">
+        <div class="card-header">
+            {{ contact.name }} <span class="text-muted">- {{ contact.email }}</span>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Subject: {{ contact.subject }}</h5>
+            <p class="card-text">Message: {{ contact.message }}</p>
+            <p class="card-text"><small class="text-muted">Created At: {{ contact.created_at }}</small></p>
+        </div>
+        <div class="card-footer bg-transparent">
+            <form action="{% url 'delete_contact' contact.slug %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
     {% else %}
     <p>No messages.</p>
     {% endif %}
