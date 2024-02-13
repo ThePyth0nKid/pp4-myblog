@@ -98,7 +98,7 @@ Acceptance Criteria 8: I can only delete my own comments and not those made by o
 
 
 
-## User Stories (could) that are not done
+## User Stories (should and could) that are not done
 
 As a user/reader I can bookmark or save my favorite blog posts so that can easily revisit and share them later.
 
