@@ -22,7 +22,6 @@
 <li><a href="#user-experince">UXD - User Experince Design</a></li>
 <ul><li><a href="#storytelling">Storytelling</a></li>
 <li><a href="#wireframe">Wireframe</a></li>
-<li><a href="#flowchart">Flowchart</a></li>
 </ul>
 <li><a href="#user-stories">User Stories</a></li>
 <li><a href="#surface-plan">The Surface Plan</a></li>
@@ -32,9 +31,6 @@
 <li><a href="#signup">Signup</a></li>
 <li><a href="#login">Login</a></li>
 <li><a href="#blogger-overview">blogger Overview</a></li>
-<li><a href="#new-post">New Post</a></li>
-<li><a href="#edit-post">Edit Post</a></li>
-<li><a href="#delete-post">Delete Post</a></li>
 <li><a href="#reader-overview">Reader Overview</a></li>
 </ul>
 <li><a href="#database-design">Database Design</a></ul>
@@ -112,11 +108,11 @@ After reading several articles, Max decides to reach out to an AGI development f
 Max can deepen his knowledge of AGI and actively engage in discussions about it.
 
 <h3 id="wireframe">Wireframes</h3>
+The wireframes are intended to provide an initial overview of how the project's design will be implemented, with an emphasis on keeping it simple. They are based on the user stories and have been created using Figma. Inspired by the Code Institute's walkthrough project, Codestar, these visual drafts are a key part of the design process. They allow for the planning of the interface's placement and layout before starting the actual development. By using wireframes and drawing inspiration from Codestar, the aim was to sketch and refine ideas in a straightforward and effective manner.
 
 ![frontpage](docs/images/frontpage1.png)
 ![frontpage#2](docs/images/frontpage2.png)
 ![user overview](docs/images/viewpost.png)
-
 ![register account](docs/images/signup.png)
 ![login](docs/images/signin.png)
 
@@ -148,27 +144,38 @@ Max can deepen his knowledge of AGI and actively engage in discussions about it.
 * As a **blogger** I can **access and view messages sent through the 'Contact Me' form** so that **I can efficiently manage and respond to user inquiries and feedback**.
 * As a **reader** I can **view a paginated list of blog posts** so that **I can easily navigate through the content and explore multiple posts without overwhelming scrolling.**.
 * As a **visitor to the website** I can **view the 'About Me' page** so that **I can learn more about the website owner, their background, interests, and professional journey.**.
-As a **user/reader** I can **bookmark or save my favorite blog posts** so that **can easily revisit and share them later**.
+* As a **user/reader** I can **bookmark or save my favorite blog posts** so that **can easily revisit and share them later**.
 
 <h2 id="surface-plan">The Surface Plane</h2>
 
 <h3 id="base">Base</h3>
 To maintain a consistent layout throughout the application, Django dynamic pages are used for the navbar and footer.
 
-Navbar
+### Navbar
+
+The website's navigation bar is designed to be classic and simple, ensuring an intuitive user experience. On the very left, visitors are greeted with the website's title, which also serves as a home button, allowing for an easy return to the homepage at any time. Right next to the title, the options "Home," "Register," and "Login" are available for quick access. On the far right, a succinct description offers insight into what the site offers, guiding newcomers and briefly highlighting the available content. This minimalist design approach not only facilitates navigation but also emphasizes the site's key features and content, ensuring users can effortlessly find what they are looking for.
 ![navbar](docs/images/navbarnotregister.png)
 
-Footer
+### Footer
+
+The footer of the website is kept very simple and includes "Made by: Nelson Mehlis" alongside social media links, which are represented by classic icons. This minimalist approach ensures a clean and uncluttered user experience, while still providing essential information and quick access to social networks.
 ![footer](docs/images/footer.png)
 
 <h3 id="homepage">Homepage</h3>
 
+### Hero and About
+
+On the homepage, visitors are greeted with a welcome text that doubles as a brief "About Me" section, explaining to new visitors what the site is about. Below this introduction, prominently featured as a hero image, is the latest post. This layout ensures that newcomers immediately understand the purpose of the site and are instantly drawn to the most recent content, highlighting the site's focus and inviting engagement right from the start.
 ![hero and about](docs/images/heroandabout.png)
 
+### Post List/Page 2
+
+The homepage features two distinct designs: The first page includes an "About"/Welcome text, a prominently featured hero post, and a small list of up to three posts in a smaller display. When navigating to the second page and beyond by pressing the "Next" button, the About/Welcome text and the hero post disappear. Instead, six posts are displayed as cards. This transition from the introductory page to the content pages shifts the focus more towards the variety and depth of the content offered, moving from an initial introduction to a broader display of posts.
 ![post list](docs/images/postlist1.png)
 
 <h3 id="signup">Signup</h3>
 
+The sign-up page maintains the website's theme of simplicity, mirroring the straightforward design of the other pages. At the top, there's a text asking if an account already exists, accompanied by a text link next to it saying "then please sign in." Below this prompt, the page is structured to collect new user information in a clear sequence: first, a field for the username, followed by email, then the password, and finally, a repeat password field for confirmation. This layout ensures a user-friendly experience, guiding newcomers through the registration process with ease.
 ![signup](docs/images/signuppage.png)
 
 <h3 id="login">Login</h3>
@@ -178,12 +185,14 @@ Its easy to login for returning user. Just fill in your username and password an
 
 <h3 id="blogger-overview">Blogger Overview</h3>
 
-![user-overview]()
+### Blogger Navbar
 
-![request-details]()
+When logged in as a Blogger, Superuser, or Admin – embodying all these roles in one – the navigation bar displays the options "Home," "Messages," "Create Post," and "Logout." Clicking on "Messages" takes you to a page where all the messages sent by readers or logged-in users are displayed. Selecting "Create Post" redirects to a page where a new post can be created. These features provide an efficient way to interact with the community and publish content on the platform.
+![blogger-navbar]()
 
-<h3 id="new-post">New Post</h3>
+### Create New Post
 
+On the "Create Post" page, bloggers/superusers are greeted with the heading "Create New Post." Directly below this, there is a text field labeled "Title" for entering the post's title. Below the title field, there's an option to select and upload an image from the blogger's/superuser's device to serve as the hero image for the post. Following the image upload option, there is a large text field for the main content of the post. Below the content field, there's another field labeled "Excerpt" for a brief summary or excerpt of the post. Next, there is a field "Updated On," which serves to indicate the last update or creation date of the post. Finally, at the bottom of the page, there is a "Create Post" button to submit the new post. This layout is specifically designed to provide bloggers and superusers with a smooth and organized process for creating posts.
 
 ![new-request]()
 
@@ -201,7 +210,7 @@ Its easy to login for returning user. Just fill in your username and password an
 
 <h3 id="reader-overview">Reader Overview</h3>
 
-![reader-overview](.)
+![reader-overview]()
 
 ![overview details]()
 

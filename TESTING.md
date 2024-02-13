@@ -61,7 +61,7 @@ Acceptance Criteria 1: On the main blog page, there should be a list of all publ
 
 Acceptance Criteria 2: Clicking on a post title should take me to a page displaying the full content of that post.
 
-Acceptance Criteria : Each blog post should show the publication date.
+Acceptance Criteria 3: Each blog post should show the publication date.
 
 ![read-post](./readme-files/images/testing/2.png)
 Click on the "Read More" button under a post title on the homepage to be redirected to a page where you can read the entire post.
