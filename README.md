@@ -1,4 +1,4 @@
-# Portfolio Project 4 - Full-Stack Toolkit
+# Portfolio Project 4 - MVP - Full-Stack Toolkit
 
 ## Title: 3yAGI
 
@@ -107,6 +107,8 @@ Max can deepen his knowledge of AGI and actively engage in discussions about it.
 <h3 id="wireframe">Wireframes</h3>
 The wireframes are intended to provide an initial overview of how the project's design will be implemented, with an emphasis on keeping it simple. They are based on the user stories and have been created using Figma. Inspired by the Code Institute's walkthrough project, Codestar, these visual drafts are a key part of the design process. They allow for the planning of the interface's placement and layout before starting the actual development. By using wireframes and drawing inspiration from Codestar, the aim was to sketch and refine ideas in a straightforward and effective manner.
 
+### General Views
+
 ![frontpage](docs/images/frontpage1.png)
 ![frontpage#2](docs/images/frontpage2.png)
 ![user overview](docs/images/viewpost.png)
@@ -142,6 +144,8 @@ The wireframes are intended to provide an initial overview of how the project's 
 * As a **reader** I can **view a paginated list of blog posts** so that **I can easily navigate through the content and explore multiple posts without overwhelming scrolling.**.
 * As a **visitor to the website** I can **view the 'About Me' page** so that **I can learn more about the website owner, their background, interests, and professional journey.**.
 * As a **user/reader** I can **bookmark or save my favorite blog posts** so that **can easily revisit and share them later**.
+
+---
 
 <h2 id="surface-plan">The Surface Plane</h2>
 
@@ -211,7 +215,13 @@ Onage, there is a list of individual messages that include the sender's name, em
 ### Delete Messages
 
 On the "Messages" page, there is a "Delete" button next to each message. Clicking on this button deletes the message. Currently, there is no confirmation prompt implemented as a security measure to prevent accidental deletion. However, this feature is planned to be added in the next iterations to enhance security and prevent unintended actions.
-![messages-page-with-messages](docs/images/deletemesssages.png)
+![delete-messages-page](docs/images/deletemessages.png)
+
+### Commiting System
+
+As a blogger/superuser, you have the ability to leave and edit comments under your own posts. Additionally, you are uniquely empowered to delete any comment, even those not authored by you. This capability ensures safety and control over the content on your site, allowing you to manage and remove inappropriate or undesirable comments. This feature provides a layer of security and moderation, ensuring that the discussion remains respectful and relevant.
+![commiting-system-blogger](docs/images/bloggercomments.png)
+
 
 <h3 id="reader-overview">Reader Overview</h3>
 
@@ -337,6 +347,7 @@ Deploy Branch
 * [Github](https://github.com/)
 * [Codeanywhere](https://app.codeanywhere.com/)
 * [Techsini](https://techsini.com/multi-mockup/index.php)
+* [ChatGPT 4](https://chat.openai.com/)
 
 ---
 
