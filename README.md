@@ -27,9 +27,6 @@
 <li><a href="#surface-plan">The Surface Plan</a></li>
 <ul>
 <li><a href="#base">Base</a></li>
-<li><a href="#homepage">Homepage</a></li>
-<li><a href="#signup">Signup</a></li>
-<li><a href="#login">Login</a></li>
 <li><a href="#blogger-overview">blogger Overview</a></li>
 <li><a href="#reader-overview">Reader Overview</a></li>
 </ul>
@@ -173,12 +170,13 @@ On the homepage, visitors are greeted with a welcome text that doubles as a brie
 The homepage features two distinct designs: The first page includes an "About"/Welcome text, a prominently featured hero post, and a small list of up to three posts in a smaller display. When navigating to the second page and beyond by pressing the "Next" button, the About/Welcome text and the hero post disappear. Instead, six posts are displayed as cards. This transition from the introductory page to the content pages shifts the focus more towards the variety and depth of the content offered, moving from an initial introduction to a broader display of posts.
 ![post list](docs/images/postlist1.png)
 
-<h3 id="signup">Signup</h3>
+### Sign Up
 
 The sign-up page maintains the website's theme of simplicity, mirroring the straightforward design of the other pages. At the top, there's a text asking if an account already exists, accompanied by a text link next to it saying "then please sign in." Below this prompt, the page is structured to collect new user information in a clear sequence: first, a field for the username, followed by email, then the password, and finally, a repeat password field for confirmation. This layout ensures a user-friendly experience, guiding newcomers through the registration process with ease.
 ![signup](docs/images/signuppage.png)
 
-<h3 id="login">Login</h3>
+### Login
+
 Its easy to login for returning user. Just fill in your username and password and you get logged in.
 ![login](docs/images/signinpage.png)
 
@@ -192,11 +190,9 @@ When logged in as a Blogger, Superuser, or Admin – embodying all these roles i
 ### Create New Post
 
 On the "Create Post" page, bloggers/superusers are greeted with the heading "Create New Post." Directly below this, there is a text field labeled "Title" for entering the post's title. Below the title field, there's an option to select and upload an image from the blogger's/superuser's device to serve as the hero image for the post. Following the image upload option, there is a large text field for the main content of the post. Below the content field, there's another field labeled "Excerpt" for a brief summary or excerpt of the post. Next, there is a field "Updated On," which serves to indicate the last update or creation date of the post. Finally, at the bottom of the page, there is a "Create Post" button to submit the new post. This layout is specifically designed to provide bloggers and superusers with a smooth and organized process for creating posts.
-![new-post](docs/images/bloggernavbar.png)
+![new-post](docs/images/createpost.png)
 
 ### Edit And Delete Post
-
-<h3 id="edit-delete-post">Edit Post</h3>
 
 The "Edit" and "Delete" buttons for posts are color-coded to ensure they can be easily distinguished without needing to read them: the "Edit" button is blue, and the "Delete" button is red. This color scheme helps users intuitively recognize the functions and reduces the likelihood of confusion by providing visual cues for the respective actions.
 ![buttons](docs/images/editpostbutton.png)
@@ -208,6 +204,10 @@ Clicking on the "Delete" button prompts a confirmation asking if you really want
 ![delete-post](docs/images/deletepostpage.png)
 
 ### Messages
+
+On the "Messages" page, there is a list of individual messages that include the sender's name, email, subject, message, and the creation date ("Created At"). If there are no messages present, the page displays "No Messages," indicating that the inbox is currently empty. This setup ensures a clear and organized view of communications for the user, allowing for easy review and management of incoming messages.
+![messages-page-with-messages](docs/images/messageswithpost.png)
+
 
 <h3 id="reader-overview">Reader Overview</h3>
 
