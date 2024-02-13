@@ -194,16 +194,20 @@ When logged in as a Blogger, Superuser, or Admin – embodying all these roles i
 On the "Create Post" page, bloggers/superusers are greeted with the heading "Create New Post." Directly below this, there is a text field labeled "Title" for entering the post's title. Below the title field, there's an option to select and upload an image from the blogger's/superuser's device to serve as the hero image for the post. Following the image upload option, there is a large text field for the main content of the post. Below the content field, there's another field labeled "Excerpt" for a brief summary or excerpt of the post. Next, there is a field "Updated On," which serves to indicate the last update or creation date of the post. Finally, at the bottom of the page, there is a "Create Post" button to submit the new post. This layout is specifically designed to provide bloggers and superusers with a smooth and organized process for creating posts.
 ![new-post](docs/images/bloggernavbar.png)
 
+### Edit And Delete Post
+
 <h3 id="edit-delete-post">Edit Post</h3>
 
 The "Edit" and "Delete" buttons for posts are color-coded to ensure they can be easily distinguished without needing to read them: the "Edit" button is blue, and the "Delete" button is red. This color scheme helps users intuitively recognize the functions and reduces the likelihood of confusion by providing visual cues for the respective actions.
 ![buttons](docs/images/editpostbutton.png)
 
-The "Edit Post" page, at this stage of the project, does not differ from the "Create New Post" page, except that when you press "Edit" on a post, you are taken to the "Create New Post" page with pre-entered data. Currently, it functions, but with compromises to user-friendliness, as the image field does not automatically populate with the name of the previously used picture. Additionally, I have integrated Summernote into my content field. However, since many of Summernote's functions require more than just simple loading, such as uploading images and videos, I designed a custom widget. This widget lacks many functions but is responsive in design and includes everything I believe is necessary for beginners to effectively use the feature. If it turns out that users need more functionality, I would adjust it in future iterations. Currently, the "Updated On" also needs to be manually changed.
-![edit-post]()
+The "Edit Post" page, at this stage of the project, does not differ from the "Create New Post" page, except that when you press "Edit" on a post, you are taken to the "Create New Post" page with pre-entered data. Currently, it functions, but with compromises to user-friendliness, as the image field does not automatically populate with the name of the previously used picture. Additionally, I have integrated Summernote into my content field. I designed a custom widget. This widget lacks many functions but is responsive in design and includes everything I believe is necessary for beginners to effectively use the feature. If it turns out that users need more functionality, I would adjust it in future iterations. Currently, the "Updated On" also needs to be manually changed.
+![edit-post](docs/images/editpostpage.png)
 
 Clicking on the "Delete" button prompts a confirmation asking if you really want to delete the post, ensuring an additional layer of security against accidental deletions.
-![delete-post]()
+![delete-post](docs/images/deletepostpage.png)
+
+### Messages
 
 <h3 id="reader-overview">Reader Overview</h3>
 
