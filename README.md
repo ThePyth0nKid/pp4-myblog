@@ -183,12 +183,11 @@ Its easy to login for returning user. Just fill in your username and password an
 ![request-details]()
 
 <h3 id="new-post">New Post</h3>
-When the user clicks on the button to make a new request, they get redirected to a form to fill in the details about the request.
+
 
 ![new-request]()
 
 <h3 id="edit-post">Edit Post</h3>
-From the overview the user can see the request and click on edit request if they need to make some changes on the request.
 
 ![buttons]()
 
@@ -228,7 +227,7 @@ On this project postgresql is used with ElephantSQL
 <h2 id="testing">Testing</h2>
 Link to the testing document.
 
-[TESTING.md](https://github.com/williamtyn/jobin/blob/main/TESTING.md)
+[TESTING.md](https://github.com/ThePyth0nKid/pp4-myblog/blob/main/TESTING.md)
 
 ---
 
@@ -236,7 +235,7 @@ Link to the testing document.
 
 The Code Institute student template was used to create this project.
 
-[Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+[Code Institute Full Template](https://github.com/Code-Institute-Org/ci-full-template)
 
 * Click the "Use This Template" button.
 * Give your repository a name, and description if you wish.
@@ -270,7 +269,7 @@ pip3 install psycopg2
 9. Create a requirements.txt file - pip3 freeze > requirements.txt
 10. Create a Procfile (note the capital P), and add the following,
 
-web: gunicorn jobin.wsgi
+web: gunicorn my_project.wsgi
 
 11. Disable Heroku from collecting static files
 
@@ -323,9 +322,7 @@ Deploy Branch
 * [Cloudinary](https://cloudinary.com/)
 * [Github](https://github.com/)
 * [Codeanywhere](https://app.codeanywhere.com/)
-* [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/)
 * [Techsini](https://techsini.com/multi-mockup/index.php)
-* [Pexels](https://www.pexels.com)
 
 ---
 
