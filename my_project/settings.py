@@ -81,12 +81,8 @@ SUMMERNOTE_CONFIG = {
 
         # Toolbar customization
         'toolbar': [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['table', ['table']],
+            ['font', ['bold', 'underline']],
+            ['para', ['ul', 'ol']],
         ],
     },
 
@@ -107,7 +103,7 @@ SUMMERNOTE_CONFIG = {
     'lazy': True,
 }
 
-SUMMERNOTE_THEME = 'bs5'  # Show summernote with Bootstrap4
+SUMMERNOTE_THEME = 'bs5'  # Show summernote with Bootstrap5
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

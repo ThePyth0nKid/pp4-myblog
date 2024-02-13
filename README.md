@@ -180,7 +180,6 @@ The sign-up page maintains the website's theme of simplicity, mirroring the stra
 
 <h3 id="login">Login</h3>
 Its easy to login for returning user. Just fill in your username and password and you get logged in.
-
 ![login](docs/images/signinpage.png)
 
 <h3 id="blogger-overview">Blogger Overview</h3>
@@ -188,24 +187,22 @@ Its easy to login for returning user. Just fill in your username and password an
 ### Blogger Navbar
 
 When logged in as a Blogger, Superuser, or Admin – embodying all these roles in one – the navigation bar displays the options "Home," "Messages," "Create Post," and "Logout." Clicking on "Messages" takes you to a page where all the messages sent by readers or logged-in users are displayed. Selecting "Create Post" redirects to a page where a new post can be created. These features provide an efficient way to interact with the community and publish content on the platform.
-![blogger-navbar]()
+![blogger-navbar](docs/images/bloggernavbar.png)
 
 ### Create New Post
 
 On the "Create Post" page, bloggers/superusers are greeted with the heading "Create New Post." Directly below this, there is a text field labeled "Title" for entering the post's title. Below the title field, there's an option to select and upload an image from the blogger's/superuser's device to serve as the hero image for the post. Following the image upload option, there is a large text field for the main content of the post. Below the content field, there's another field labeled "Excerpt" for a brief summary or excerpt of the post. Next, there is a field "Updated On," which serves to indicate the last update or creation date of the post. Finally, at the bottom of the page, there is a "Create Post" button to submit the new post. This layout is specifically designed to provide bloggers and superusers with a smooth and organized process for creating posts.
+![new-post](docs/images/bloggernavbar.png)
 
-![new-request]()
+<h3 id="edit-delete-post">Edit Post</h3>
 
-<h3 id="edit-post">Edit Post</h3>
+The "Edit" and "Delete" buttons for posts are color-coded to ensure they can be easily distinguished without needing to read them: the "Edit" button is blue, and the "Delete" button is red. This color scheme helps users intuitively recognize the functions and reduces the likelihood of confusion by providing visual cues for the respective actions.
+![buttons](docs/images/editpostbutton.png)
 
-![buttons]()
-
+The "Edit Post" page, at this stage of the project, does not differ from the "Create New Post" page, except that when you press "Edit" on a post, you are taken to the "Create New Post" page with pre-entered data. Currently, it functions, but with compromises to user-friendliness, as the image field does not automatically populate with the name of the previously used picture. Additionally, I have integrated Summernote into my content field. However, since many of Summernote's functions require more than just simple loading, such as uploading images and videos, I designed a custom widget. This widget lacks many functions but is responsive in design and includes everything I believe is necessary for beginners to effectively use the feature. If it turns out that users need more functionality, I would adjust it in future iterations. Currently, the "Updated On" also needs to be manually changed.
 ![edit-post]()
 
-<h3 id="delete-post">Delete Post</h3>
-
-![buttons](.)
-
+Clicking on the "Delete" button prompts a confirmation asking if you really want to delete the post, ensuring an additional layer of security against accidental deletions.
 ![delete-post]()
 
 <h3 id="reader-overview">Reader Overview</h3>
