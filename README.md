@@ -190,7 +190,7 @@ When logged in as a Blogger, Superuser, or Admin – embodying all these roles i
 ### Create New Post
 
 On the "Create Post" page, bloggers/superusers are greeted with the heading "Create New Post." Directly below this, there is a text field labeled "Title" for entering the post's title. Below the title field, there's an option to select and upload an image from the blogger's/superuser's device to serve as the hero image for the post. Following the image upload option, there is a large text field for the main content of the post. Below the content field, there's another field labeled "Excerpt" for a brief summary or excerpt of the post. Next, there is a field "Updated On," which serves to indicate the last update or creation date of the post. Finally, at the bottom of the page, there is a "Create Post" button to submit the new post. This layout is specifically designed to provide bloggers and superusers with a smooth and organized process for creating posts.
-![new-post](docs/images/createpost.png)
+![new-post](docs/images/newpost.png)
 
 ### Edit And Delete Post
 
@@ -205,9 +205,13 @@ Clicking on the "Delete" button prompts a confirmation asking if you really want
 
 ### Messages
 
-On the "Messages" page, there is a list of individual messages that include the sender's name, email, subject, message, and the creation date ("Created At"). If there are no messages present, the page displays "No Messages," indicating that the inbox is currently empty. This setup ensures a clear and organized view of communications for the user, allowing for easy review and management of incoming messages.
+Onage, there is a list of individual messages that include the sender's name, email, subject, message, and the creation date ("Created At"). If there are no messages present, the page displays "No Messages," indicating that the inbox is currently empty. This setup ensures a clear and organized view of communications for the user, allowing for easy review and management of incoming messages.
 ![messages-page-with-messages](docs/images/messageswithpost.png)
 
+### Delete Messages
+
+On the "Messages" page, there is a "Delete" button next to each message. Clicking on this button deletes the message. Currently, there is no confirmation prompt implemented as a security measure to prevent accidental deletion. However, this feature is planned to be added in the next iterations to enhance security and prevent unintended actions.
+![messages-page-with-messages](docs/images/deletemesssages.png)
 
 <h3 id="reader-overview">Reader Overview</h3>
 
