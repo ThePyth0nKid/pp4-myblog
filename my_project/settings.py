@@ -32,7 +32,9 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-thepyth0nkid-pp4-myblog-l43pa5ri7f.us2.codeanyapp.com', '.herokuapp.com']
+    '8000-thepyth0nkid-pp4-myblog-l43pa5ri7f.us2.codeanyapp.com',
+    '.herokuapp.com',
+]
 
 
 # Application definition
@@ -104,9 +106,6 @@ SUMMERNOTE_CONFIG = {
 
     'lazy': True,
 }
-
-# Ensure functions like example_test_func and my_custom_upload_to_func are properly defined in your Django project files.
-
 
 SUMMERNOTE_THEME = 'bs5'  # Show summernote with Bootstrap4
 

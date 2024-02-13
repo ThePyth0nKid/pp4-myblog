@@ -121,7 +121,7 @@ def comment_edit(request, slug, comment_id):
     comment is updated or if an error occurs.
 
     Raises:
-    - Http404: If no post or comment matching the provided slug and ID is found.
+    - Http404: No matching post/comment for slug/ID.
     """
     if request.method == "POST":
 
