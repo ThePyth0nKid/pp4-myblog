@@ -222,6 +222,11 @@ On the "Messages" page, there is a "Delete" button next to each message. Clickin
 As a blogger/superuser, you have the ability to leave and edit comments under your own posts. Additionally, you are uniquely empowered to delete any comment, even those not authored by you. This capability ensures safety and control over the content on your site, allowing you to manage and remove inappropriate or undesirable comments. This feature provides a layer of security and moderation, ensuring that the discussion remains respectful and relevant.
 ![commiting-system-blogger](docs/images/bloggercomments.png)
 
+### Summary Blogger
+
+The purpose behind implementing these features was to achieve complete CRUD (Create, Read, Update, Delete) functionality on the frontend as a blogger/superuser. With these functions, I should have met this objective, although there is still room for improvement in the execution. This allows for comprehensive management of blog posts, comments, and messages, providing the necessary tools to create content, engage with readers, and maintain a clean and respectful online space, all without the need for a specific framework.
+
+---
 
 <h3 id="reader-overview">Reader Overview</h3>
 
