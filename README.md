@@ -247,7 +247,7 @@ The purpose behind implementing these features was to achieve complete CRUD (Cre
 <h2 id="database-design">Database Design</h2>
 On this project postgresql is used with ElephantSQL
 
-## Entity-Relationship Diagram (ERD) Description
+## Reader Entity-Relationship Diagram (ERD) Description
 
 ### Post Entity
 
@@ -285,8 +285,49 @@ _Relationships_:
 
 _Relationship_: A post can have multiple comments (`has`).
 
-[Reader Database Diagram](docs/images/data_models/reader-data-erd.png)
+![Reader Database Diagram](docs/images/data_models/reader-data-erd.png)
 
+# Blogger Entity-Relationship Diagram (ERD) Description
+
+## Post Entity
+
+* `title`: The title of the blog post.
+* `slug`: A URL-friendly version of the title, used as a unique key (PK, Primary Key).
+* `content`: The full content of the blog post.
+* `created_on`: The timestamp when the post was created.
+* `updated_on`: The timestamp when the post was last updated.
+* `excerpt`: A short snippet or summary of the blog post.
+* `featured_image`: An image associated with the blog post, managed through the Cloudinary service.
+
+_Relationships_:
+* Bloggers can read and write Posts (`read and write`).
+
+## Contact Entity
+
+* `name`: The name of the individual submitting the contact form.
+* `email`: Their email address.
+* `subject`: The subject line of the contact message.
+* `message`: The message content.
+* `slug`: A unique identifier for the message, generated from the subject.
+* `created_at`: The timestamp when the message was sent.
+
+_Relationships_:
+* Bloggers can read all Contact messages (`read all`).
+
+## Comment Entity
+
+* `body`: The content of the comment.
+* `created_on`: The timestamp when the comment was posted.
+
+_Relationships_:
+* Bloggers can write their own Comments (`write own`).
+* Bloggers can read all Comments (`read all`).
+* Bloggers can edit their own Comments (`edit own`).
+* Bloggers can delete all Comments (`deletes all`).
+
+_Relationship_: Posts have multiple Comments (`has`).
+
+![Reader Database Diagram](docs/images/data_models/blogger-data-erd.png)
 ---
 
 <h2 id="testing">Testing</h2>
