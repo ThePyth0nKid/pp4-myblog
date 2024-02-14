@@ -232,13 +232,17 @@ The purpose behind implementing these features was to achieve complete CRUD (Cre
 
 ### Navbar
 
-![reader-overview]()
+In the reader's navigation bar, you'll find sections for "Home," "Contact Me," and "Logout" at the top. This layout ensures that readers have easy access to the main areas of the site, including a way to reach out directly via the contact section and the ability to easily log out of their account, enhancing the user experience with straightforward navigation.
+![reader-navbar](docs/images/readernavbar.png)
 
 ### Contact Me
 
+On the "Contact Me" page, readers are presented with a form to facilitate direct communication with the blogger. The form comprises fields for "Name," "Subject," "Email," and "Message," followed by a red "Send" button. This configuration enables readers to submit inquiries, feedback, or comments directly to the blogger, streamlining the communication process.
 ![overview details]()
 
 ### Commeting System
+
+On the detail page of a post, readers have the ability to leave comments by filling out the text field under "Leave a Comment" and then confirming with the red "Submit" button. In addition to being able to post new comments, readers can also view comments made by others. Moreover, readers have the option to edit or delete their own comments, providing a level of control over their contributions and interactions on the platform.
 
 ![present-candidate]()
 
@@ -435,16 +439,44 @@ Deploy Branch
 
 <h2 id="credits">Credits</h2>
 
-#### Code
+### Code
 
-*
+My initiation into the project and foundational learning were significantly shaped by the exemplary guidance from the Code Institute and Matt's walkthrough of "I Think Therefore I Blog." Their approach served as a beacon of inspiration and a point of reference throughout the entire project. A heartfelt thank you for their crucial support.
 
-*
+### Bootstrap
 
-#### Bootstrap
+Bootstrap's comprehensive library has been instrumental in allowing me to concentrate on backend development while significantly reducing the time spent on styling and layout in the frontend. Particularly, I find the card design exceptionally dynamic, a feature that resonates deeply with my aesthetic and functional preferences. As a result, this design element is frequently utilized throughout my project, enhancing its visual appeal and user interaction.
 
-#### Django
+### Django
 
-#### Issues with code
+Django's generic views have significantly streamlined my workflow, with its stellar documentation proving invaluable. Moreover, the user and superuser functionalities within Django have saved me ample time. Notably, utilizing Django Allauth has been exceptional; its seamless integration and ease of use have greatly expedited my development process.
+
+### Issues with code
+
+Most of the daily problems were solved thanks to [Stackoverflow](https://stackoverflow.com/), [W3Schools](https://www.w3schools.com/) and [ChatGpt](https://chat.openai.com/)
+
+Daily Problems:
+
+#### 404
+
+Throughout my work on the project, I encountered 404 errors intermittently. However, they were typically resolved quickly by checking all relevant aspects within the Django project that could be responsible. This included reviewing the URL configuration, ensuring the existence of corresponding templates, and verifying the correct usage of routes and view functions.
+
+#### TemplateDoesNotExist
+
+I also encountered TemplateDoesNotExist errors at times. However, similar to the 404 errors, these issues were typically resolved swiftly by examining all relevant aspects within the Django project. This involved checking the template directories, confirming the correct template names and paths, and ensuring proper template inheritance and inclusion.
+
+#### NoReverseMatch
+
+NoReverseMatch errors occasionally appeared during my project work. However, similar to the TemplateDoesNotExist and 404 errors, resolving these issues was usually straightforward. I carefully reviewed all pertinent aspects within the Django project, including the URL configurations, {% url %} template tag usage, and ensuring alignment between named URL patterns and corresponding views.
+
+#### TemplateSyntaxError
+
+TemplateSyntaxError was another challenge encountered during my project work. Nevertheless, similar to addressing TemplateDoesNotExist and 404 errors, resolving these issues necessitated careful review of all pertinent aspects within the Django project, such as template syntax, correct template tag usage, and ensuring proper template inheritance.
+
+#### FieldError
+
+Encountering a Field Error was another challenge I faced during my project work. Resolving such errors often required a thorough examination of the affected fields, including their definitions and usage in Django models, forms, or views. It often involved ensuring that the fields were correctly named and configured with the appropriate data types to address these errors.
 
 <h2 id="acknowledgements">Acknowledgements</h2>
+
+Special thanks to Code Institute for their superb learning materials and the understanding of the Student Care Team during extraordinary life situations. I'm deeply grateful. A special acknowledgment goes to my mentor, Harry Dhillon, whose direct approach consistently guided me back on track. Your support has been invaluable on this journey. Lastly, heartfelt thanks to my three children and my wife for their unwavering support; without you, none of this would be possible.
