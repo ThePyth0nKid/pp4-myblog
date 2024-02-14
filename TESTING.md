@@ -112,34 +112,53 @@ As a user I can sign in to the blog platform using my Google account so that I c
 
 <h3 id="navigation">Navigation Bar</h3>
 
-* 
+* All links correctly redirect to the correct pages for visitors.
+* Navbar is fully responsive on small/medium/large devices.
+* Reader sees correct link "Contact Me" when logged in.
+* Blogger sees correct links "Messages" and "Create Post" when logged in.
+* Navbar collapse works on smaller devices.
+
 
 <h3 id="footer">Footer</h3>
 
-* 
+* All icon links work correctly.
+* All links open in a new pag
+* The footer appears at the end of the page.
 
 <h3 id="homepage">Homepage</h3>
 
-* 
+* All buttons work and links correctly.
+* Icons are being displayed correctly.
+* Images are displayed correctly.
+* Good contrast between text/images/buttons.
 
 <h3 id="signup">Signup page</h3>
 
-* 
+* Username and password are required as expected.
+* Email are optional.
+* After a successful login, a confirmation message is displayed: "Successfully signed in as ..."
+* The username cannot be assigned twice, and if one tries to register with a username that is already in use, a message will be displayed after the registration attempt: "A user with that username already exists."
+* The password confirmation works correctly and shows a message when two different passwords are entered: "You must type the same password each time."
+* The system also correctly identifies and notifies when a password is entirely numeric, displaying the message: "This password is entirely numeric."
+* The system checks for passwords that are too similar to the user's other personal information and displays the message: "Your password can’t be too similar to your other personal information."
+* The system requires passwords to have a minimum length and displays the message: "Your password must contain at least 8 characters."
+* The system checks for commonly used passwords and will display the message: "Your password can’t be a commonly used password" if such a password is attempted.
 
 <h3 id="signout">Signout page</h3>
 
-* 
+* Upon attempting to sign out, the system will prompt with the message: "Are you sure you want to sign out?"
+* After signing out, the system displays the message: "You have signed out."
 
 <h3 id="login">Login page</h3>
 
+* Form works as expected with username and password.
+* After a successful login, a confirmation message is displayed: "Successfully signed in as nelson-mehlis."
+
 ### Reader
-
-<h3 id="navigation-reader">Navigation Bar Reader</h3>
-
-* 
 
 <h3 id="post-detail-reader">Post Detail Reader</h3>
 
+* As a reader, you can write comments on the post detail page.
 * 
 
 <h3 id="contact-me">Contact Me</h3>
