@@ -71,8 +71,10 @@
                     </li>
                     {% else %}
                     <!-- Contact Me link for regular users -->
-                    <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}"
-                        href="{% url 'contact' %}">Contact Me</a>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}"
+                            href="{% url 'contact' %}">Contact Me</a>
+                    </li>
                     {% endif %}
                     <!-- Logout link -->
                     <li class="nav-item">
