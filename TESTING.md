@@ -53,8 +53,8 @@ Acceptance Criteria 2: Upon successful registration, I should receive a confirma
 
 Acceptance Criteria 3: I should be able to log in with my registered credentials.
 
-![signup](./readme-files/images/testing/1.png)
-On the signup page, the user can sign up and add their own unique email and password.
+![signup]()
+On the signup page, the user can sign up and add their own unique username and password.
 
 <h3 id="two">As a reader, I can view blog posts so that I can stay informed about the blogger's content.</h3>
 Acceptance Criteria 1: On the main blog page, there should be a list of all published blog posts.

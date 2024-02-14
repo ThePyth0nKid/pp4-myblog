@@ -453,7 +453,7 @@ Django's generic views have significantly streamlined my workflow, with its stel
 
 ### Issues with code
 
-Most of the daily problems were solved thanks to [Stackoverflow](https://stackoverflow.com/), [W3Schools](https://www.w3schools.com/) and [ChatGpt](https://chat.openai.com/)
+Most of the daily problems were solved thanks to [Stackoverflow](https://stackoverflow.com/), [W3Schools](https://www.w3schools.com/) and [ChatGpt](https://chat.openai.com/).
 
 Daily Problems:
 
