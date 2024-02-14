@@ -230,9 +230,15 @@ The purpose behind implementing these features was to achieve complete CRUD (Cre
 
 <h3 id="reader-overview">Reader Overview</h3>
 
+### Navbar
+
 ![reader-overview]()
 
+### Contact Me
+
 ![overview details]()
+
+### Commeting System
 
 ![present-candidate]()
 
@@ -241,15 +247,45 @@ The purpose behind implementing these features was to achieve complete CRUD (Cre
 <h2 id="database-design">Database Design</h2>
 On this project postgresql is used with ElephantSQL
 
-[Database Diagram]()
+## Entity-Relationship Diagram (ERD) Description
 
-### Key Models
+### Post Entity
 
-### Blog
+* `title`: The title of the blog post.
+* `slug`: A URL-friendly version of the title, serving as a unique key (Primary Key, PK).
+* `content`: The content of the blog post.
+* `created_on`: Timestamp indicating when the post was created.
+* `updated_on`: Timestamp indicating when the post was last updated.
+* `excerpt`: A brief excerpt from the blog post.
+* `featured_image`: An image representing the blog post, managed through Cloudinary.
 
-*
-*
-*
+_Relationship_: Readers can read posts (`reads`).
+
+### Contact Entity
+
+* `name`: The name of the reader.
+* `email`: The email address of the reader.
+* `subject`: The subject of the contact message.
+* `message`: The content of the message.
+* `slug`: A unique key generated from the subject.
+* `created_at`: The timestamp when the message was created.
+
+_Relationship_: Readers can write contact messages (`write`).
+
+### Comment Entity
+
+* `body`: The text content of the comment.
+* `created_on`: The timestamp of when the comment was created.
+
+_Relationships_:
+* Readers can write comments (`write`).
+* Readers can read all comments (`read`).
+* Readers can edit their own comments (`edit`).
+* Readers can delete their own comments (`delete`).
+
+_Relationship_: A post can have multiple comments (`has`).
+
+[Reader Database Diagram](docs/images/data_models/reader-data-erd.png)
 
 ---
 
