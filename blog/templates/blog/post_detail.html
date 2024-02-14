@@ -2,6 +2,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+<!-- This code, originating from the Codestar project by Code Institute, has been extended to include functions for editing and deleting posts, along with a delete function for superusers to remove all comments. -->
 <!-- Start of content block -->
 {% block content %}
 <div class="masthead">
@@ -18,7 +19,7 @@
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="{% static 'images/default.png' %}" class="card-img-top new-post" alt="Default image">
                 {% else %}
-                <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
+                <img src="{{ post.featured_image.url }}" class="card-img-top new-post" alt="{{ post.title }}">
                 {% endif %}
             </div>
         </div>
@@ -93,7 +94,7 @@
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
-                    <!-- Edit and delete buttons for comments, shown only to authenticated users who are the authors of the comment -->
+                    <!-- Edit and delete buttons for comments, shown only to authenticated users who are the authors of the comment or superuser -->
                     {% if user.is_authenticated %}
                         {% if comment.author == user %}
                         <button class="btn btn-primary btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>

@@ -4,6 +4,9 @@ from django.utils.text import slugify
 from django.utils import timezone
 from cloudinary.models import CloudinaryField
 
+# This code is based on Codestar project models from Code Institute
+# Defines the Post model, representing a blog post.
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -28,6 +31,7 @@ class Post(models.Model):
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
+
 
 class Comment(models.Model):
     post = models.ForeignKey(

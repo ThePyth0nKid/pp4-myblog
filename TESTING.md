@@ -187,9 +187,9 @@ As a user I can sign in to the blog platform using my Google account so that I c
 
 This applies to every browser. User is authenticated in the browser when they log in.
 
-* User gets redirected to login page if not authenticated for /new//order.
+* .
 
-* Message 
+* 
 
 <h3 id="responsivness">Responsivness</h3>
 
@@ -230,8 +230,13 @@ In production the site has been tested on the following browsers.
 ### [JSHint Javascript Validator](https://jshint.com/)
 
 * 0 Errors
-* 0 Warnings
+* 11 Warnings
 
+During code testing, a total of 11 warnings related to the use of ES6-specific features such as const for variable declarations, arrow functions (=>), and template literals were observed. These warnings are not indicative of incorrect or unexpected code; instead, they reflect adherence to modern JavaScript practices compliant with the ECMAScript 6 (ES6) standard.
+
+Given the project's standard use of ES6 syntax, these warnings are expected and do not necessitate immediate action. Development environments and toolchains should be configured to fully support these modern features. This includes setting up linting tools to recognize and accept ES6 features and ensuring that runtime environments (like browsers and Node.js) are compatible with these standards.
+
+Adhering to the ES6 standard is considered an important step towards improving code quality, readability, and maintainability. Therefore, the use of modern JavaScript features will continue, while keeping compatibility and best practices in mind.
 
 ### PEP8 Python Validator
 
