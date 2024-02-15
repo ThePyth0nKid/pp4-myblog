@@ -51,14 +51,19 @@
 ## Base Stories Testing
 
 <h3 id="one">As a user, I can register for an account so that I can have a personalized experience on the blog platform.</h3>
+
 Acceptance Criteria 1: The registration page should ask for a unique username and password.
+
 Acceptance Criteria 2: Upon successful registration, I should receive a confirmation.
+
 Acceptance Criteria 3: I should be able to log in with my registered credentials.
 
 Test result: The user registration works without bugs. I've tested signing up with a username and password, attempting to register with invalid data. All fields function as they should, displaying a warning for invalid input, and registration can only proceed with valid input.
 
 <h3 id="two">As a user, I want the blog website to be accessible and user-friendly on various devices so that I can enjoy a seamless experience regardless of the device I'm using.</h3>
+
 Acceptance Criteria 1: The website should adjust its layout and design based on the device's screen size.
+
 Acceptance Criteria 2: Navigation and content should be clear and easy to interact with on desktop, tablet, and mobile.
 
 Test result: The design has been tested on all common devices with the Chrome DevTool and shows no bugs. The image on the post detail page disappears on small devices, but this is intentional.
@@ -66,38 +71,59 @@ Test result: The design has been tested on all common devices with the Chrome De
 ## Reader Stories Testing
 
 <h3 id="three"></h3>As a reader I can view a paginated list of blog posts so that I can easily navigate through the content and explore multiple posts without overwhelming scrolling.
+
 Acceptance Criteria 1: On the main blog page or a designated blog section, there should be a list of blog posts.
+
 Acceptance Criteria 2: The list should be divided into pages, with a specific number of posts displayed per page.
+
 Acceptance Criteria 3: Each page should include clear navigation options, such as "Previous" and "Next" buttons, to move between pages.
+
 Acceptance Criteria 4: The current page number or position within the paginated list should be displayed for reference.
+
 Acceptance Criteria 5: Clicking on a blog post title or preview should take me to the full content of that post.
+
 Acceptance Criteria 6: If there are more posts than can fit on a single page, the platform should automatically generate and display additional pages.
+
 Acceptance Criteria 7: The pagination system should ensure that the list remains organized and user-friendly, even as new posts are added to the platform.
 
 Test result: I've tested that all acceptance criteria function as expected, and everything works without bugs. The only issue I've noticed is that even when there are no more posts available, the card for the hero/latest post is still rendered.
 
 <h3 id="four">As a reader, I can view blog posts so that I can stay informed about the blogger's content.</h3>
+
 Acceptance Criteria 1: On the main blog page, there should be a list of all published blog posts.
+
 Acceptance Criteria 2: Clicking on a post title should take me to a page displaying the full content of that post.
+
 Acceptance Criteria 3: Each blog post should show the publication date.
 
 Test result: I've tested that as a reader, clicking on the "read more" button takes you to the correct post detail page and that all post-relevant metadata are displayed correctly. For the posts from my fixtures file, which I use as post examples, "noon" is displayed as the time, but this is only due to the JSON file. For newly created posts, everything is displayed correctly.
 
 <h3 id="five">As a reader, I can leave comments on blog posts so that I can share my thoughts and engage with the content.</h3>
+
 Acceptance Criteria 1: I can share my thoughts and engage with the content.
+
 Acceptance Criteria 2: I should be able to enter my comment and submit it.
+
 Acceptance Criteria 3: Comments should be displayed on the post.
 
 Test result: I have tested that I, as a reader, can leave a comment on a post page and the comments are displayed correctly and without bugs.
 
 <h3 id="six">As a registered user I can edit and delete my comments so that can correct mistakes or remove outdated information.</h3>
+
 Acceptance Criteria 1: When I view a comment I've posted, I see an "Edit" button next to it.
+
 Acceptance Criteria 2: When I click the "Edit" button, I can make changes to the content of my comment.
+
 Acceptance Criteria 3: After editing, I can save my changes, and the comment will be updated with the new content.
+
 Acceptance Criteria 4: I can only edit my own comments and not those made by other users.
+
 Acceptance Criteria 5: When I view a comment I've posted, I also see a "Delete" button next to it.
+
 Acceptance Criteria 6: When I click the "Delete" button, I am prompted to confirm the deletion.
+
 Acceptance Criteria 7: After confirming the deletion, the comment is removed from the system and no longer visible to other users.
+
 Acceptance Criteria 8: I can only delete my own comments and not those made by other users.
 
 Test result: I have tested the function for editing a user's own reader comments, and everything works as expected. The only issue I noticed is that after editing a comment, the text remains in the text field.
@@ -106,6 +132,7 @@ Additionally, I have tested that a user can only delete their own comments and t
 ## Blogger Stories Testing
 
 <h3 id="seven">As a blogger I can create a new blog post so that I can share my thoughts and experiences with my audience.</h3>
+
 Acceptance Criteria 1: When I log in to the blog platform, I should see a "Create New Post" button.
 
 Acceptance Criteria 2: The create post page should include fields for the title, content, and any relevant metadata.
@@ -115,23 +142,33 @@ Acceptance Criteria 3: After submitting the new post, it should be immediately v
 Test result: I have tested that I, as a blogger, can create new posts. The function works as expected. What I noticed is that the Summernote widget's description of the function on the buttons is in an Asian language. Uploading images works well, but if images are uploaded in a format that is too large or too small, the image is cropped when displayed.
 
 <h3 id="eight">As a blogger, I can edit my existing blog posts so that I can keep my content up-to-date and accurate.</h3>
+
 Acceptance Criteria 1: Each blog post should have an "Edit" option on the main blog page.
+
 Acceptance Criteria 2: Clicking on the "Edit" option should take me to an edit page with the current content of the post.
+
 Acceptance Criteria 3: After updating a post, the changes should be immediately reflected on the main blog page.
 
 Test result: I have tested that I, as a blogger, can delete and edit a post on the post detail page, and everything works as expected. When pressing the edit button, I am redirected to the create post page with pre-filled fields of the post to be edited. What stands out is that in the image field, the name of the current image is not displayed, but the function works. After updating the post, I am redirected back to the post page and receive a confirmation message at the top.
 
 <h3 id="nine">As a blogger, I can delete blog posts so that my blog remains organized and trustworthy.</h3>
+
 Acceptance Criteria 1: Each blog post should have a "Delete" option on the main blog page.
+
 Acceptance Criteria 2: Clicking on the "Delete" option should prompt me for confirmation before removing the post.
+
 Acceptance Criteria 3: After deletion, the post should be removed from the main blog page.
 
 Test result: Upon clicking the delete button, I am prompted to confirm my deletion, which also works as expected.
 
 <h3 id="ten">As a blogger I can enhance my blog posts with images so that I can visually engage and communicate with my audience.</h3>
+
 Acceptance Criteria 1: On the blog post creation/edit page, there should be an option to upload images.
+
 Acceptance Criteria 2: I should be able to select and upload one image from my local device.
+
 Acceptance Criteria 3: The system should support common image formats such as JPEG, PNG, and GIF.
+
 Acceptance Criteria 4: Uploaded images should be displayed within the blog post content.
 
 Test result: Uploading images works well, but if images are uploaded in a format that is too large or too small, the image is cropped when displayed.
@@ -299,8 +336,15 @@ When testing through text input with the W3C HTML validator, there were 8 error 
 
 ### [JSHint Javascript Validator](https://jshint.com/)
 
+#### Check by address
+
 * 0 Errors
-* 11 Warnings
+* 0 Warnings
+
+#### Check by text input
+
+* 0 Errors
+* 27 Warnings
 
 During code testing, a total of 11 warnings related to the use of ES6-specific features such as const for variable declarations, arrow functions (=>), and template literals were observed. These warnings are not indicative of incorrect or unexpected code; instead, they reflect adherence to modern JavaScript practices compliant with the ECMAScript 6 (ES6) standard.
 
@@ -320,15 +364,23 @@ Any errors related to files that were auto generated by Django were left untouch
 
 #### On desktop for homepage
 
-![lighthouse1]()
+![lighthouse1](docs/images/testing/desktoplighthouse.png)
 
 #### On mobile for homepage
 
-![lighthouse1]()
+![lighthouse1](docs/images/testing/mobilelighthouse.png)
 
 ---
 
 <h2 id="bugs">Bugs</h2>
 
+When there are no posts available, the Bootstrap card for the Hero post is still being rendered on the homepage.
 
+In Summernote, the button descriptions are in an Asian script.
+
+When updating comments on a post, the date remains the same.
+
+When editing a post, the current image is not displayed
+
+<h3 id="solved-bugs">Solved Bugs</h3>
 ---
