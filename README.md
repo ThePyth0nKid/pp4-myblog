@@ -441,7 +441,7 @@ Deploy Branch
 
 ### Code
 
-My initiation into the project and foundational learning were significantly shaped by the exemplary guidance from the Code Institute and Matt's walkthrough of "I Think Therefore I Blog." Their approach served as a beacon of inspiration and a point of reference throughout the entire project. A heartfelt thank you for their crucial support.
+My initiation into the project and foundational learning were significantly shaped by the exemplary guidance from the Code Institute and Matt's walkthrough of "I Think Therefore I Blog." Their approach served as a beacon of inspiration and a point of reference throughout the entire project. Additionally, I would like to extend a heartfelt thank you to Williamty for the superb structure of his README.md and TESTING.md files. His meticulous organization and clear presentation have greatly contributed to the coherence and accessibility of my project documentation.
 
 ### Bootstrap
 
