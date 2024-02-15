@@ -238,13 +238,13 @@ In the reader's navigation bar, you'll find sections for "Home," "Contact Me," a
 ### Contact Me
 
 On the "Contact Me" page, readers are presented with a form to facilitate direct communication with the blogger. The form comprises fields for "Name," "Subject," "Email," and "Message," followed by a red "Send" button. This configuration enables readers to submit inquiries, feedback, or comments directly to the blogger, streamlining the communication process.
-![overview details]()
+![overview details](docs/images/readercontactme.png)
 
 ### Commeting System
 
 On the detail page of a post, readers have the ability to leave comments by filling out the text field under "Leave a Comment" and then confirming with the red "Submit" button. In addition to being able to post new comments, readers can also view comments made by others. Moreover, readers have the option to edit or delete their own comments, providing a level of control over their contributions and interactions on the platform.
 
-![present-candidate]()
+![present-candidate](docs/images/readercomments.png)
 
 ---
 
