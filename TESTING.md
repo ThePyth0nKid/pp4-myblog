@@ -5,6 +5,19 @@
 ## Testing Catalouge
 
 <li><a href="#user-stories">User Stories Testing</a></li>
+<ul>
+<li><a href="#one">User Authentication</a></li>
+<li><a href="#two">Responsive Design</a></li>
+<li><a href="#three">View Paginated List of Posts</a></li>
+<li><a href="#four">Read Blog Post</a></li>
+<li><a href="#five">Commenting System</a></li>
+<li><a href="#six">Comment Editing and Deletion</a></li>
+<li><a href="#seven">Create Blog Post</a></li>
+<li><a href="#eight">Update Blog Pos</a></li>
+<li><a href="#nine">Delete Blog Post</a></li>
+<li><a href="#ten">Upload Images to Blog Post</a></li>
+<li><a href="#eleven">Admin Dashboard for Viewing Contact Messages</a></li>
+</ul>
 <li><a href="#manual-testing">Manual Testing</a></li>
 <ul>
 <li><a href="#navigation-bar">Navigation Bar</a></li>
@@ -44,7 +57,7 @@
 
 ---
 
-## Reader Stories Testing
+## Base Stories Testing
 
 <h3 id="one">As a user, I can register for an account so that I can have a personalized experience on the blog platform.</h3>
 Acceptance Criteria 1: The registration page should ask for a unique username and password.
@@ -53,29 +66,51 @@ Acceptance Criteria 2: Upon successful registration, I should receive a confirma
 
 Acceptance Criteria 3: I should be able to log in with my registered credentials.
 
-![signup]()
-On the signup page, the user can sign up and add their own unique username and password.
+Test result:
 
-<h3 id="two">As a reader, I can view blog posts so that I can stay informed about the blogger's content.</h3>
+<h3 id="two">As a user, I want the blog website to be accessible and user-friendly on various devices so that I can enjoy a seamless experience regardless of the device I'm using.</h3>
+Acceptance Criteria 1: The website should adjust its layout and design based on the device's screen size.
+
+Acceptance Criteria 2: Navigation and content should be clear and easy to interact with on desktop, tablet, and mobile.
+
+Test result:
+
+## Reader Stories Testing
+
+<h3 id="three"></h3>As a reader I can view a paginated list of blog posts so that I can easily navigate through the content and explore multiple posts without overwhelming scrolling.
+Acceptance Criteria 1: On the main blog page or a designated blog section, there should be a list of blog posts.
+
+Acceptance Criteria 2: The list should be divided into pages, with a specific number of posts displayed per page.
+
+Acceptance Criteria 3: Each page should include clear navigation options, such as "Previous" and "Next" buttons, to move between pages.
+
+Acceptance Criteria 4: The current page number or position within the paginated list should be displayed for reference.
+
+Acceptance Criteria 5: Clicking on a blog post title or preview should take me to the full content of that post.
+
+Acceptance Criteria 6: If there are more posts than can fit on a single page, the platform should automatically generate and display additional pages.
+
+Acceptance Criteria 7: The pagination system should ensure that the list remains organized and user-friendly, even as new posts are added to the platform.
+
+Test result:
+
+<h3 id="four">As a reader, I can view blog posts so that I can stay informed about the blogger's content.</h3>
 Acceptance Criteria 1: On the main blog page, there should be a list of all published blog posts.
 
 Acceptance Criteria 2: Clicking on a post title should take me to a page displaying the full content of that post.
 
 Acceptance Criteria 3: Each blog post should show the publication date.
 
-![read-post](./readme-files/images/testing/2.png)
-Click on the "Read More" button under a post title on the homepage to be redirected to a page where you can read the entire post.
-<h3 id="three">As a reader, I can leave comments on blog posts so that I can share my thoughts and engage with the content.</h3>
+<h3 id="five">As a reader, I can leave comments on blog posts so that I can share my thoughts and engage with the content.</h3>
 Acceptance Criteria 1: I can share my thoughts and engage with the content.
 
 Acceptance Criteria 2: I should be able to enter my comment and submit it.
 
 Acceptance Criteria 3: Comments should be displayed on the post.
 
-![commenting-sytem](./readme-files/images/testing/3.1.png)
-If you're logged in as a user, leave a comment on the post page by clicking "Leave a Comment" under the text. Type your comment in the text field and click "Submit" to post your comment.
+Test result:
 
-<h3 id="four">As a registered user I can edit and delete my comments so that can correct mistakes or remove outdated information.</h3>
+<h3 id="six">As a registered user I can edit and delete my comments so that can correct mistakes or remove outdated information.</h3>
 Acceptance Criteria 1: When I view a comment I've posted, I see an "Edit" button next to it.
 
 Acceptance Criteria 2: When I click the "Edit" button, I can make changes to the content of my comment.
@@ -92,17 +127,63 @@ Acceptance Criteria 7: After confirming the deletion, the comment is removed fro
 
 Acceptance Criteria 8: I can only delete my own comments and not those made by other users.
 
-![edit-delete-sytem](./readme-files/images/testing/3.1.png)
+Test result:
 
 ## Blogger Stories Testing
 
+<h3 id="seven">As a blogger I can create a new blog post so that I can share my thoughts and experiences with my audience.</h3>
+Acceptance Criteria 1: When I log in to the blog platform, I should see a "Create New Post" button.
 
+Acceptance Criteria 2: The create post page should include fields for the title, content, and any relevant metadata.
+
+Acceptance Criteria 3: After submitting the new post, it should be immediately visible on the blog.
+
+Test result:
+
+<h3 id="eight">As a blogger, I can edit my existing blog posts so that I can keep my content up-to-date and accurate.</h3>
+Acceptance Criteria 1: Each blog post should have an "Edit" option on the main blog page.
+
+Acceptance Criteria 2: Clicking on the "Edit" option should take me to an edit page with the current content of the post.
+
+Acceptance Criteria 3: After updating a post, the changes should be immediately reflected on the main blog page.
+
+Test result:
+
+<h3 id="nine">As a blogger, I can delete blog posts so that my blog remains organized and trustworthy.</h3>
+Acceptance Criteria 1: Each blog post should have a "Delete" option on the main blog page.
+
+Acceptance Criteria 2: Clicking on the "Delete" option should prompt me for confirmation before removing the post.
+
+Acceptance Criteria 3: After deletion, the post should be removed from the main blog page.
+
+<h3 id="ten">As a blogger I can enhance my blog posts with images so that I can visually engage and communicate with my audience.</h3>
+Acceptance Criteria 1: On the blog post creation/edit page, there should be an option to upload images.
+
+Acceptance Criteria 2: I should be able to select and upload one image from my local device.
+
+Acceptance Criteria 3: The system should support common image formats such as JPEG, PNG, and GIF.
+
+Acceptance Criteria 4: Uploaded images should be displayed within the blog post content.
+
+Test result:
+
+<h3 id="eleven">As a blogger I can access and view messages sent through the 'Contact Me' form so that I can efficiently manage and respond to user inquiries and feedback.</h3>
+Acceptance Criteria 1: Ensure that there is a dedicated link in the navbar which is accessible only to admin and superuser accounts. This link should lead to a page or a section where messages from the 'Contact Me' form are listed.
+
+Acceptance Criteria 2:On accessing the link, the admin/superuser should be presented with a list or table displaying the messages. This should include relevant details such as the sender's name, email and message content of the message submission.
+
+
+Acceptance Criteria 3:Ensure that the message viewing functionality is secure and respects privacy. Only authorized admin or superusers should be able to view these messages.
+
+Test result:
 
 ## User Stories (should and could) that are not done
 
 As a user/reader I can bookmark or save my favorite blog posts so that can easily revisit and share them later.
 
 As a user I can sign in to the blog platform using my Google account so that I can access the platform with minimal effort and use my existing Google credentials.
+
+As a visitor to the website I can view the 'About Me' page so that I can learn more about the website owner, their background, interests, and professional journey.
 
 ---
 
@@ -195,12 +276,20 @@ This applies to every browser. User is authenticated in the browser when they lo
 
 Chrome dev tools were used throughout the development of the project to test responsiveness. Responsiveness was tested using Dev Tools to emulate the following devices.
 
-* Iphone 5
-* Iphone 6/7/8
-* Iphone 6/7/8 Plus
-* Iphone X
-* Ipad
-* Ipad Pro
+* iPhone SE
+* iPhone XR
+* iPhone 12 Pro
+* iPhone 14 Pro Max
+* Pixel 7
+* Samsung Galaxy S8+
+* Samsung Galaxy S20 Ultra
+* iPad Mini
+* iPad Air
+* iPad Pro
+* Surface Pro 7
+* Surface Duo
+* Galaxy Fold
+* Samsung Galaxy A51/71
 
 <h3 id="browser-testing">Browser Testing</h3>
 
@@ -218,9 +307,17 @@ In production the site has been tested on the following browsers.
 
 ### [W3C HTML Validator](https://validator.w3.org/)
 
+#### Check by address
+
 * 0 Errors
 * 0 Warnings
 
+#### Check by text input
+
+* 8 Errors
+* 0 Warnings
+
+When testing through text input with the W3C HTML validator, there were 8 error messages, all stemming from the Summernote widget. In the current phase, these could only be accepted and not debugged. However, all functionalities are still operational.
 
 ### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
@@ -233,10 +330,6 @@ In production the site has been tested on the following browsers.
 * 11 Warnings
 
 During code testing, a total of 11 warnings related to the use of ES6-specific features such as const for variable declarations, arrow functions (=>), and template literals were observed. These warnings are not indicative of incorrect or unexpected code; instead, they reflect adherence to modern JavaScript practices compliant with the ECMAScript 6 (ES6) standard.
-
-Given the project's standard use of ES6 syntax, these warnings are expected and do not necessitate immediate action. Development environments and toolchains should be configured to fully support these modern features. This includes setting up linting tools to recognize and accept ES6 features and ensuring that runtime environments (like browsers and Node.js) are compatible with these standards.
-
-Adhering to the ES6 standard is considered an important step towards improving code quality, readability, and maintainability. Therefore, the use of modern JavaScript features will continue, while keeping compatibility and best practices in mind.
 
 ### PEP8 Python Validator
 
