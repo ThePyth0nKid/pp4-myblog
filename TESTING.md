@@ -41,6 +41,7 @@
 </ul>
 <li><a href="#lighthouse">Lighthouse Testing</a></li>
 <li><a href="#bugs">Bugs</a></li>
+<li><a href="#solved-bugs">Solved Bugs</a></li>
 
 ---
 
@@ -383,4 +384,9 @@ When updating comments on a post, the date remains the same.
 When editing a post, the current image is not displayed
 
 <h3 id="solved-bugs">Solved Bugs</h3>
+
+During the course of the project, I resolved several bugs that significantly improved the security and functionality of the platform. One such issue allowed readers to access blogger pages by copying links directly, bypassing intended access restrictions. I addressed this vulnerability by implementing a check to determine if the user is a superuser. If they were not, the system would redirect them to the homepage, effectively preventing unauthorized access.
+
+Another challenge was the lack of responsiveness and functionality in Summernote, which hampered the user experience on various devices. To overcome this, I designed a custom widget that is fully responsive and tailored to the needs of a blogging platform. This custom widget includes only the essential functions needed for blogging, streamlining the content creation process while ensuring a seamless experience across all devices.
+
 ---
