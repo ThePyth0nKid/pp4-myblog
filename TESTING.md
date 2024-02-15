@@ -24,19 +24,13 @@
 <li><a href="#footer">Footer</a></li>
 <li><a href="#homepage">Homepage</a></li>
 <li><a href="#signup">Signup Page</a></li>
-<li><a href="#login">Login Page</a></li>
-<li><a href="#new-request">New Request Customer</a></li>
-<li><a href="#request-overview">Request Overview</a></li>
-<li><a href="#edit-request-customer">Edit Request Customer</a></li>
-<li><a href="#delete-request-customer">Delete Request Customer</a></li>
-<li><a href="#see-candidates">See Candidates as Customer</a></li>
-<li><a href="#partner-overview">Partner Overview</a></li>
-<li><a href="#send-candidate">Send Candidate</a></li>
-<li><a href="#logout">Log out</a></li>
-<li><a href="#adminpanel">Admin panel</a></li>
-<li><a href="#authorization">Authorization</a></li>
-<li><a href="#responsivness">Responsivness</a></li>
-<li><a href="#browser-testing">Browser Testing</a></li>
+<li><a href="#signout">Signout page</a></li>
+<li><a href="#login">Login</a></li>
+<li><a href="#post-detail-reader">Post Detail Reader</a></li>
+<li><a href="#contact-me">Contact Me</a></li>
+<li><a href="#navigation-bar-blogger">Navigation Bar Blogger</a></li>
+<li><a href="#post-detail-blogger">Post Detail Blogger</a></li>
+<li><a href="#messages">Messages</a></li>
 </ul>
 <li><a href="#validation">Validation</a></li>
 <ul>
@@ -47,9 +41,6 @@
 </ul>
 <li><a href="#lighthouse">Lighthouse Testing</a></li>
 <li><a href="#bugs">Bugs</a></li>
-<ul>
-<li><a href="#solved-bugs">Solved Bugs</a></li>
-</ul>
 
 ---
 
@@ -66,14 +57,14 @@ Acceptance Criteria 2: Upon successful registration, I should receive a confirma
 
 Acceptance Criteria 3: I should be able to log in with my registered credentials.
 
-Test result:
+Test result: The user registration works without bugs. I've tested signing up with a username and password, attempting to register with invalid data. All fields function as they should, displaying a warning for invalid input, and registration can only proceed with valid input.
 
 <h3 id="two">As a user, I want the blog website to be accessible and user-friendly on various devices so that I can enjoy a seamless experience regardless of the device I'm using.</h3>
 Acceptance Criteria 1: The website should adjust its layout and design based on the device's screen size.
 
 Acceptance Criteria 2: Navigation and content should be clear and easy to interact with on desktop, tablet, and mobile.
 
-Test result:
+Test result: The design has been tested on all common devices with the Chrome DevTool and shows no bugs. The image on the post detail page disappears on small devices, but this is intentional.
 
 ## Reader Stories Testing
 
@@ -92,7 +83,7 @@ Acceptance Criteria 6: If there are more posts than can fit on a single page, th
 
 Acceptance Criteria 7: The pagination system should ensure that the list remains organized and user-friendly, even as new posts are added to the platform.
 
-Test result:
+Test result: I've tested that all acceptance criteria function as expected, and everything works without bugs. The only issue I've noticed is that even when there are no more posts available, the card for the hero/latest post is still rendered.
 
 <h3 id="four">As a reader, I can view blog posts so that I can stay informed about the blogger's content.</h3>
 Acceptance Criteria 1: On the main blog page, there should be a list of all published blog posts.
@@ -101,6 +92,8 @@ Acceptance Criteria 2: Clicking on a post title should take me to a page display
 
 Acceptance Criteria 3: Each blog post should show the publication date.
 
+Test result: I've tested that as a reader, clicking on the "read more" button takes you to the correct post detail page and that all post-relevant metadata are displayed correctly. For the posts from my fixtures file, which I use as post examples, "noon" is displayed as the time, but this is only due to the JSON file. For newly created posts, everything is displayed correctly.
+
 <h3 id="five">As a reader, I can leave comments on blog posts so that I can share my thoughts and engage with the content.</h3>
 Acceptance Criteria 1: I can share my thoughts and engage with the content.
 
@@ -108,7 +101,7 @@ Acceptance Criteria 2: I should be able to enter my comment and submit it.
 
 Acceptance Criteria 3: Comments should be displayed on the post.
 
-Test result:
+Test result: I have tested that I, as a reader, can leave a comment on a post page and the comments are displayed correctly and without bugs.
 
 <h3 id="six">As a registered user I can edit and delete my comments so that can correct mistakes or remove outdated information.</h3>
 Acceptance Criteria 1: When I view a comment I've posted, I see an "Edit" button next to it.
@@ -127,7 +120,8 @@ Acceptance Criteria 7: After confirming the deletion, the comment is removed fro
 
 Acceptance Criteria 8: I can only delete my own comments and not those made by other users.
 
-Test result:
+Test result: I have tested the function for editing a user's own reader comments, and everything works as expected. The only issue I noticed is that after editing a comment, the text remains in the text field.
+Additionally, I have tested that a user can only delete their own comments and that when pressing the delete button, a confirmation modal appears. In this modal, a user can click "close" to cancel the process, and upon clicking "delete," the comment is removed. After deletion, a confirmation of the deletion appears below the navbar.
 
 ## Blogger Stories Testing
 
@@ -138,7 +132,7 @@ Acceptance Criteria 2: The create post page should include fields for the title,
 
 Acceptance Criteria 3: After submitting the new post, it should be immediately visible on the blog.
 
-Test result:
+Test result: I have tested that I, as a blogger, can create new posts. The function works as expected. What I noticed is that the Summernote widget's description of the function on the buttons is in an Asian language. Uploading images works well, but if images are uploaded in a format that is too large or too small, the image is cropped when displayed.
 
 <h3 id="eight">As a blogger, I can edit my existing blog posts so that I can keep my content up-to-date and accurate.</h3>
 Acceptance Criteria 1: Each blog post should have an "Edit" option on the main blog page.
@@ -147,7 +141,7 @@ Acceptance Criteria 2: Clicking on the "Edit" option should take me to an edit p
 
 Acceptance Criteria 3: After updating a post, the changes should be immediately reflected on the main blog page.
 
-Test result:
+Test result: I have tested that I, as a blogger, can delete and edit a post on the post detail page, and everything works as expected. When pressing the edit button, I am redirected to the create post page with pre-filled fields of the post to be edited. What stands out is that in the image field, the name of the current image is not displayed, but the function works. After updating the post, I am redirected back to the post page and receive a confirmation message at the top.
 
 <h3 id="nine">As a blogger, I can delete blog posts so that my blog remains organized and trustworthy.</h3>
 Acceptance Criteria 1: Each blog post should have a "Delete" option on the main blog page.
@@ -155,6 +149,8 @@ Acceptance Criteria 1: Each blog post should have a "Delete" option on the main 
 Acceptance Criteria 2: Clicking on the "Delete" option should prompt me for confirmation before removing the post.
 
 Acceptance Criteria 3: After deletion, the post should be removed from the main blog page.
+
+Test result: Upon clicking the delete button, I am prompted to confirm my deletion, which also works as expected.
 
 <h3 id="ten">As a blogger I can enhance my blog posts with images so that I can visually engage and communicate with my audience.</h3>
 Acceptance Criteria 1: On the blog post creation/edit page, there should be an option to upload images.
@@ -165,7 +161,7 @@ Acceptance Criteria 3: The system should support common image formats such as JP
 
 Acceptance Criteria 4: Uploaded images should be displayed within the blog post content.
 
-Test result:
+Test result: Uploading images works well, but if images are uploaded in a format that is too large or too small, the image is cropped when displayed.
 
 <h3 id="eleven">As a blogger I can access and view messages sent through the 'Contact Me' form so that I can efficiently manage and respond to user inquiries and feedback.</h3>
 Acceptance Criteria 1: Ensure that there is a dedicated link in the navbar which is accessible only to admin and superuser accounts. This link should lead to a page or a section where messages from the 'Contact Me' form are listed.
@@ -175,7 +171,7 @@ Acceptance Criteria 2:On accessing the link, the admin/superuser should be prese
 
 Acceptance Criteria 3:Ensure that the message viewing functionality is secure and respects privacy. Only authorized admin or superusers should be able to view these messages.
 
-Test result:
+Test result: I have tested that I, as a blogger, can see the messages sent to me through the "contact me" page by readers. Everything works as expected.
 
 ## User Stories (should and could) that are not done
 
@@ -233,28 +229,42 @@ As a visitor to the website I can view the 'About Me' page so that I can learn m
 <h3 id="login">Login page</h3>
 
 * Form works as expected with username and password.
-* After a successful login, a confirmation message is displayed: "Successfully signed in as nelson-mehlis."
+* After a successful login, a confirmation message is displayed: "Successfully signed in as ..."
+* It is not possible to sign in with account data that does not exist.
 
 ### Reader
 
 <h3 id="post-detail-reader">Post Detail Reader</h3>
 
 * As a reader, you can write comments on the post detail page.
-* 
+* The comments are displayed immediately after clicking the submit button.
+* As a reader, you can only edit your own comments.
+* The confirmation message "comment submitted" is displayed at the top, below the navbar.
+* The reader can delete and edit their own comments, and only their own. There are no buttons for other comments.
+* After editing, the comment is immediately displayed in the new, updated version.
+* "Comment Updated!" A confirmation message is displayed at the top, below the navbar.
+* After clicking on the delete button, a modal is opened where the deletion must be confirmed again.
+* After clicking "close" in the modal, the deletion process is canceled.
+* After clicking "delete" in the modal, the comment is deleted and no longer visible, and a confirmation message is displayed at the top, below the navbar.
 
 <h3 id="contact-me">Contact Me</h3>
 
-* 
+* When clicking on "contact me" in the navbar, the reader is redirected to a page where they can write a message to the blogger.
+* It is not possible to send the message without having filled out the necessary fields.
+* The email field must contain a valid email, or it will display a message indicating that the input is not an email.
+* After successfully sending the message, the reader is redirected back to the homepage.
+* After successfully sending the message, a message is displayed below the navbar: "Thank you! Your message has been sent."
 
 ### Blogger
 
-<h3 id="navigation-blogger">Navigation Bar Blogger</h3>
+<h3 id="navigation-bar-blogger">Navigation Bar Blogger</h3>
 
-* 
+* As a blogger/superuser, the navbar displays "Home", "Messages", "Create Post", and "Logout".
+* Upon clicking the links, I am taken to the respective page.
 
 <h3 id="post-detail-blogger">Post Detail Blogger</h3>
 
-* 
+* When I, as a blogger, click on the "read more" button on a post, I am redirected to the correct post detail page.
 
 <h3 id="messages">Messages</h3>
 
@@ -264,42 +274,6 @@ As a visitor to the website I can view the 'About Me' page so that I can learn m
 
 * 
 
-<h3 id="authorization">Authorization</h3>
-
-This applies to every browser. User is authenticated in the browser when they log in.
-
-* .
-
-* 
-
-<h3 id="responsivness">Responsivness</h3>
-
-Chrome dev tools were used throughout the development of the project to test responsiveness. Responsiveness was tested using Dev Tools to emulate the following devices.
-
-* iPhone SE
-* iPhone XR
-* iPhone 12 Pro
-* iPhone 14 Pro Max
-* Pixel 7
-* Samsung Galaxy S8+
-* Samsung Galaxy S20 Ultra
-* iPad Mini
-* iPad Air
-* iPad Pro
-* Surface Pro 7
-* Surface Duo
-* Galaxy Fold
-* Samsung Galaxy A51/71
-
-<h3 id="browser-testing">Browser Testing</h3>
-
-During development, testing was mainly done solely using Google Chrome.
-
-In production the site has been tested on the following browsers.
-
-* Firefox
-* Safari
-* Opera
 
 ---
 
@@ -356,9 +330,6 @@ Any errors related to files that were auto generated by Django were left untouch
 ---
 
 <h2 id="bugs">Bugs</h2>
-
-
-<h3 id="solved-bugs">Solved Bugs</h3>
 
 
 ---
